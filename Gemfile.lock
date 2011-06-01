@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.6)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     columnize (0.3.2)
     erubis (2.6.6)
@@ -76,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   rails (= 3.0.3)
   ruby-debug
   sqlite3-ruby

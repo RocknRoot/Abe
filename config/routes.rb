@@ -1,4 +1,10 @@
 Mmap::Application.routes.draw do
+
+  get "sessions/new"
+
+  resources :users
+  resources :sessions
+
   resources :terms, :except => [:show, :new, :index] do
     member do
       get :add
@@ -11,6 +17,10 @@ Mmap::Application.routes.draw do
       get :add
     end
   end
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
 
   root :to => "categories#list", :id => 0
 
