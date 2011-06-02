@@ -1,6 +1,7 @@
   Table of contents:
     * Presentation
     * Features
+    * Changelog
     * Licence
 
 #####################################################################
@@ -9,22 +10,35 @@
 
                          Charge Abe, discharge your brain, go party.
 
+ *  Demo :      http://abe.lunaticpunk.com
+ *  Version :   0.2-Hilton
+
 #####################################################################
 ##                            FEATURES                             ##
 #####################################################################
 
 Implemented:
-* Categories: you can create categories (like folders) to put others
-  categories
-* or terms into.
-* Terms: terms are definitions, write down your knowledge.
-* Users: contents are linked with an user, you need one.
+ *  Categories: you can create categories (like folders) to put others
+    categories or terms into.
+ *  Terms: terms are definitions, write down your knowledge.
+ *  Users: contents are linked with an user, you need one.
 
 Incoming:
-* categories/terms operations : move, copy
-* tinyMCE integration
-* different terms types
-* some design things
+ *  categories/terms operations : move, copy
+ *  tinyMCE integration
+ *  different terms types
+ *  some design things
+
+#####################################################################
+##                            CHANGELOG                            ##
+#####################################################################
+
+0.2-Hilton
+ *  Users
+
+0.1-Jameson
+ *  Categories
+ *  Terms
 
 #####################################################################
 ##                             LICENCE                             ##
