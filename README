@@ -10,8 +10,10 @@
 
                          Charge Abe, discharge your brain, go party.
 
- *  Demo :      http://abe.lunaticpunk.com
- *  Version :   0.2-Hilton
+ *  Public install :    http://abe.lunaticpunk.com
+    You can use it.
+ *  Version :           0.2-Hilton
+    Development/stable at the same time.
 
 #####################################################################
 ##                            FEATURES                             ##
@@ -33,10 +35,10 @@ Incoming:
 ##                            CHANGELOG                            ##
 #####################################################################
 
-0.2-Hilton
+0.2-Hilton : development/stable
  *  Users
 
-0.1-Jameson
+0.1-Jameson : legacy
  *  Categories
  *  Terms
 
