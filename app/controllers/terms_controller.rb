@@ -1,5 +1,5 @@
 class TermsController < ApplicationController
-  before_filter :authenticate
+  before_filter :user_loggued
 
   # GET /terms/1/add
   # GET /terms/1/add.xml

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110213020213) do
+ActiveRecord::Schema.define(:version => 20110601223032) do
 
   create_table "categories", :force => true do |t|
     t.integer  "parent_id"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20110213020213) do
     t.integer  "category_id"
     t.string   "name"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "login"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

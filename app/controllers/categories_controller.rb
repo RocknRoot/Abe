@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_filter :authenticate
+  before_filter :user_loggued
 
   private
   def get_parents(id)
