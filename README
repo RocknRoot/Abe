@@ -1,3 +1,35 @@
+  Table of contents:
+    * Presentation
+    * Features
+    * Licence
+
+#####################################################################
+##                          PRESENTATION                           ##
+#####################################################################
+
+                         Discharge your brain, charge Abe, go party.
+
+#####################################################################
+##                            FEATURES                             ##
+#####################################################################
+
+Implemented:
+* Categories: you can create categories (like folders) to put others
+  categories
+* or terms into.
+* Terms: terms are definitions, write down your knowledge.
+* Users: contents are linked with an user, you need one.
+
+Incoming:
+* categories/terms operations : move, copy
+* tinyMCE integration
+* different terms types
+* some design things
+
+#####################################################################
+##                             LICENCE                             ##
+#####################################################################
+
  WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
 
