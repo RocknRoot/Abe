@@ -1,6 +1,7 @@
   Table of contents:
     * Presentation
     * Features
+    * Installation
     * Changelog
     * Licence
 
@@ -8,39 +9,39 @@
 ##                          PRESENTATION                           ##
 #####################################################################
 
-                         Charge Abe, discharge your brain, go party.
+                          Charge Abe, discharge your brain, go party.
 
  *  Public install :    http://abe.lunaticpunk.com
     You can use it.
- *  Version :           0.2-Hilton
-    Development/stable at the same time.
+ *  Version :           0.1-Hilton
+    Under development.
 
 #####################################################################
 ##                            FEATURES                             ##
 #####################################################################
 
 Implemented:
- *  Categories: you can create categories (like folders) to put others
-    categories or terms into.
- *  Terms: terms are definitions, write down your knowledge.
- *  Users: contents are linked with an user, you need one.
 
 Incoming:
+ *  Categories: you can create categories (like folders) to put
+    others categories or terms into.
+ *  Terms: terms are definitions, write down your knowledge.
+ *  Users: contents are linked with an user, you need one.
  *  categories/terms operations : move, copy
  *  tinyMCE integration
  *  different terms types
  *  some design things
 
 #####################################################################
+##                          INSTALLATION                           ##
+#####################################################################
+
+
+#####################################################################
 ##                            CHANGELOG                            ##
 #####################################################################
 
-0.2-Hilton : development/stable
- *  Users
-
-0.1-Jameson : legacy
- *  Categories
- *  Terms
+0.1-Hilton : development
 
 #####################################################################
 ##                             LICENCE                             ##
