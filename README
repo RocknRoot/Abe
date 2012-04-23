@@ -1,7 +1,7 @@
   Table of contents:
     * Presentation
-    * Features
     * Installation
+    * Incoming
     * Changelog
     * Licence
 
@@ -25,25 +25,22 @@ social stuff.
 in the little private internet of yours.
 
 #####################################################################
-##                            FEATURES                             ##
+##                          INSTALLATION                           ##
 #####################################################################
 
-Implemented:
 
-Incoming:
+#####################################################################
+##                            INCOMING                             ##
+#####################################################################
+
  *  Categories: you can create categories (like folders) to put
     others categories or terms into.
  *  Terms: terms are definitions, write down your knowledge.
+ *  Tags: term tags
  *  Users: contents are linked with an user, you need one.
  *  categories/terms operations : move, copy
  *  tinyMCE integration
  *  different terms types
- *  some design things
-
-#####################################################################
-##                          INSTALLATION                           ##
-#####################################################################
-
 
 #####################################################################
 ##                            CHANGELOG                            ##
