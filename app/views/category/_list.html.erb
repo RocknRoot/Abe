@@ -1,0 +1,8 @@
+<li><%= category.name %>
+<ul>
+  <% category.children.each do |child| %>
+    <%= render "category/list", :locals => { :category => child } %>
+  <% end %>
+  <li><%= link_to "Create child", new_category_path(category.id) %></li>
+</ul>
+</li>

@@ -1,0 +1,12 @@
+<div id="welcome">
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:error] %>
+    <p class="error"><%= flash[:error] %></p>
+  <% end %>
+
+  <h1>Welcome</h1>
+  <p>Why sign up, blablabla</p>
+  <p style="align: center;"><%= link_to "Sign up", signup_path %></p>
+</div>

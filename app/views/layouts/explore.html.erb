@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abe</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= render "shared/header" %>
+
+  <%= render "shared/left_bar", :locals => { :categories => @categories } %>
+
+  <div id="content">
+    <%= yield %>
+  </div>
+
+  <%= render "shared/footer" %>
+
+</body>
+</html>
