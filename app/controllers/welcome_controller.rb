@@ -12,9 +12,8 @@ class WelcomeController < ApplicationController
   def signup_create
     go_to_root_if_loggued
     @user = User.new(params[:user])
-    logger.debug "user : #{@user}"
     if @user.save
-      redirect_to root_url, :notice => t(:signed_up)
+      redirect_to root_url, :notice => t("welcome.signed_up")
     else
       render "signup"
     end
@@ -24,15 +23,15 @@ class WelcomeController < ApplicationController
     user = User.authenticate(params[:login], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to explore_path, :notice => t(:loggued_in)
+      redirect_to explore_path, :notice => t("welcome.loggued_in")
     else
-      flash[:error] = t(:invalid_login)
+      flash[:error] = t("welcome.invalid_login")
       render "index"
     end
   end
 
   def logout
     session[:user_id] = nil
-    redirect_to root_url, :notice => t(:loggued_out)
+    redirect_to root_url, :notice => t("welcome.loggued_out")
   end
 end

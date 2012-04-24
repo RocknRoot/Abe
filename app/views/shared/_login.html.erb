@@ -1,11 +1,11 @@
 <%= form_tag login_url do %>
 
-  <%= label_tag t(:model_user_login) %>
+  <%= label_tag I18n.t("model.users.login") %>
   <%= text_field_tag :login, params[:login] %>
 
-  <%= label_tag t(:password) %>
+  <%= label_tag I18n.t("model.users.password") %>
   <%= password_field_tag :password %>
 
-  <%= submit_tag t(:log) %>
+  <%= submit_tag I18n.t("welcome.log") %>
 
 <% end %>

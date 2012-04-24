@@ -1,0 +1,22 @@
+fr:
+  general:
+    errors: "Erreurs"
+
+  explore:
+    category:
+      create: "Créer une catégorie enfant"
+      create_root: "Créer une catégorie racine"
+
+  welcome:
+    invalid_login: "Login ou mot de passe invalide"
+    log: "Log"
+    loggued_in: "Connecté!"
+    loggued_out: "Déconnecté..."
+    signed_up: "Enregistré!"
+    sign_up: "S'enregistrer"
+
+  model:
+    users:
+      email: "Adresse e-mail"
+      login: "Login"
+      password: "Mot de passe"

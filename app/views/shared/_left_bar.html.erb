@@ -2,5 +2,5 @@
   <% @categories.each do |c| %>
     <%= render "category/list", :locals => { :category => c } %>
   <% end %>
-  <p><%= link_to t(:category_create_root), new_category_path %></p>
+  <p><%= link_to I18n.t("explore.category.create_root"), new_category_path %></p>
 </div>

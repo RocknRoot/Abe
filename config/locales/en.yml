@@ -1,0 +1,22 @@
+en:
+  general:
+    errors: "Errors"
+
+  explore:
+    category:
+      create: "Create child category"
+      create_root: "Create root category"
+
+  welcome:
+    invalid_login: "Invalid login or password"
+    log: "Log"
+    loggued_in: "Loggued in!"
+    loggued_out: "Déconnecté..."
+    signed_up: "Signed up!"
+    sign_up: "Sign up"
+
+  model:
+    users:
+      email: "E-mail address"
+      login: "Login"
+      password: "Password"
