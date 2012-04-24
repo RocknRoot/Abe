@@ -1,17 +1,22 @@
 Abe::Application.routes.draw do
 
-  root :to => 'welcome#index'
+  root :to => "welcome#index"
 
-  # welcome
-  match "/welcome"       => "welcome#index"
-  match "/login"         => "welcome#login"
-  match "/signup"        => "welcome#signup"
-  match "/signup_create" => "welcome#signup_create"
+  scope "(:locale)" do
+    # welcome
+    match "/welcome"       => "welcome#index"
+    match "/login"         => "welcome#login"
+    match "/logout"        => "welcome#logout"
+    match "/signup"        => "welcome#signup"
+    match "/signup_create" => "welcome#signup_create"
 
-  #explore
-  match "/explore" => "explore#index"
+    #explore
+    match "/explore" => "explore#index"
 
-  resources :category
+    resources :category
+  end
+
+  match "/:locale" => "welcome#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
