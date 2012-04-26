@@ -1,6 +1,8 @@
 <div id="left_bar">
-  <% @categories.each do |c| %>
-    <%= render "category/list", :locals => { :category => c } %>
-  <% end %>
-  <p><%= link_to I18n.t("explore.category.create_root"), new_category_path %></p>
+  <p><%= link_to I18n.t("categories.root").downcase, categories_path %></p>
+  <ul>
+    <% @categories.each do |c| %>
+      <%= render "categories/list", :category => c %>
+    <% end %>
+  </ul>
 </div>

@@ -1,7 +1,7 @@
 <%= form_for @user, :url => signup_create_path do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
-      <p><%= "general.errors" %> :</p>
+      <p><%=t "general.errors" %> :</p>
       <ul>
         <% for message in @user.errors.full_messages %>
           <li><%= message %></li>

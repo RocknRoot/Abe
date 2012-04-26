@@ -4,16 +4,14 @@ Abe::Application.routes.draw do
 
   scope "(:locale)" do
     # welcome
-    match "/welcome"       => "welcome#index"
-    match "/login"         => "welcome#login"
-    match "/logout"        => "welcome#logout"
-    match "/signup"        => "welcome#signup"
-    match "/signup_create" => "welcome#signup_create"
+    match "/welcome"        => "welcome#index"
+    match "/login"          => "welcome#login"
+    match "/logout"         => "welcome#logout"
+    match "/signup"         => "welcome#signup"
+    match "/signup_create"  => "welcome#signup_create"
+    match "/explore"        => "categories#index"
 
-    #explore
-    match "/explore" => "explore#index"
-
-    resources :category
+    resources :categories, :except => :new
   end
 
   match "/:locale" => "welcome#index"

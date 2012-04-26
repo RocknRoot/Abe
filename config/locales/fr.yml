@@ -2,10 +2,12 @@ fr:
   general:
     errors: "Erreurs"
 
-  explore:
-    category:
-      create: "Créer une catégorie enfant"
-      create_root: "Créer une catégorie racine"
+  categories:
+    create: "Ajouter"
+    delete: "Supprimer"
+    delete_confirm: "Etes-vous sûr ?"
+    parent: "Parent"
+    root: "Racine"
 
   welcome:
     invalid_login: "Login ou mot de passe invalide"

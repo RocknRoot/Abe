@@ -1,0 +1,30 @@
+<p id="actions">
+  <% if params.has_key?(:id) %>
+    <%= link_to I18n.t("categories.delete"), category_path(@category.id), :method => :delete, :class => "delete", :confirm => I18n.t("categories.delete_confirm") %>
+  <% end %>
+</p>
+
+<!-- parent link !-->
+<% if params.has_key?(:id) %>
+  <% if @category.parent_id == nil %>
+    <%= link_to "..", categories_path, :class => "category" %>
+  <% else %>
+    <%= link_to "..", category_path(@category.parent_id), :class => "category" %>
+  <% end %>
+<% end %>
+
+<!-- children categories !-->
+<% if @children_categories.count != 0 %>
+  <% @children_categories.each do |c| %>
+    <%= link_to c.name, category_path(c.id), :class => "category" %>
+  <% end %>
+<% end %>
+
+<!-- new category link !-->
+<%= form_for(@child) do |f| %>
+  <span class="category">
+    <%= f.text_field :name %>
+    <%= f.hidden_field :parent_id %>
+    <%= f.submit I18n.t("categories.create") %>
+  </span>
+<% end %>

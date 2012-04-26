@@ -2,10 +2,12 @@ en:
   general:
     errors: "Errors"
 
-  explore:
-    category:
-      create: "Create child category"
-      create_root: "Create root category"
+  categories:
+    create: "Add child"
+    delete: "Delete"
+    delete_confirm: "Are you sure ?"
+    parent: "Parent"
+    root: "Root"
 
   welcome:
     invalid_login: "Invalid login or password"

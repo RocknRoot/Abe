@@ -11,9 +11,9 @@ class User < ActiveRecord::Base
   validates_uniqueness_of   :login
 
   has_many :tags
-  has_many :comments
-  has_many :categories
-  has_many :terms
+  has_many :comments, :dependent => :nullify
+  has_many :categories, :dependent => :destroy
+  has_many :terms, :dependent => :destroy
 
   def self.authenticate(login, password)
     user = find_by_login(login)
