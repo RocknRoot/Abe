@@ -15,7 +15,7 @@
  *  Homepage:           http://rocknroot.org/content/abe
  *  Version :           0.1-Hilton - under development
 
-  Abe is kind of a personnal encyclopedia where you can throw notes
+  Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia where you can throw notes
 and definitions and maybe organize them later.
 
   You can also share some with friends, set them public and other
@@ -37,7 +37,6 @@ in the little private internet of yours.
     others categories or terms into.
  *  Terms: terms are definitions, write down your knowledge.
  *  Tags: term tags
- *  Users: contents are linked with an user, you need one.
  *  categories/terms operations : move, copy
  *  tinyMCE integration
  *  different terms types

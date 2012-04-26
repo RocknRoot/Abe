@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    if params[:category].has_key?(:parent_id) and @current_user.categories.all(:conditions => [ "id = ?", params[:category][:parent_id] ]).count == 0
+    if params[:category][:parent_id] != "" and @current_user.categories.all(:conditions => [ "id = ?", params[:category][:parent_id] ]).count == 0
       redirect_to categories_path
     else
       @category = Category.new
@@ -37,9 +37,25 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    @category = Category.find_by_id(params[:id])
+    if @category.nil? and !@current_user.categories.include?(@category)
+      redirect_to categories_path
+    else
+      @breadcrumb = "#{@category.name} / #{t("categories.edit")}"
+    end
   end
 
   def update
+    @category = Category.find_by_id(params[:id])
+    if @category.nil? and !@current_user.categories.include?(@category)
+      redirect_to categories_path
+    else
+      if @category.update_attributes(params[:category])
+        redirect_to category_path(@category)
+      else
+        render "edit"
+      end
+    end
   end
 
   def destroy

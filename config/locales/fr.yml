@@ -6,7 +6,7 @@ fr:
     create: "Ajouter"
     delete: "Supprimer"
     delete_confirm: "Etes-vous sûr ?"
-    parent: "Parent"
+    edit: "Modifier"
     root: "Racine"
 
   welcome:
@@ -18,6 +18,9 @@ fr:
     sign_up: "S'enregistrer"
 
   model:
+    categories:
+      name: "Nom"
+      parent: "Parent"
     users:
       email: "Adresse e-mail"
       login: "Login"

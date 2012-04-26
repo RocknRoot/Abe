@@ -1,5 +1,6 @@
 <p id="actions">
   <% if params.has_key?(:id) %>
+    <%= link_to I18n.t("categories.edit"), edit_category_path(@category.id), :class => "edit" %>
     <%= link_to I18n.t("categories.delete"), category_path(@category.id), :method => :delete, :class => "delete", :confirm => I18n.t("categories.delete_confirm") %>
   <% end %>
 </p>

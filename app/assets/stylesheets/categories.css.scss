@@ -28,6 +28,16 @@
       padding-top: 5px;
     }
 
+    .edit {
+      color: #038;
+      text-decoration: none;
+    }
+
+    .edit:hover {
+      background-color: #038;
+      color: white;
+    }
+
     .delete {
       color: #800;
       text-decoration: none;

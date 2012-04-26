@@ -1,0 +1,22 @@
+<%= form_for(@category) do |f| %>
+
+  <% if @category.errors.any? %>
+    <div class="error_messages">
+      <p><%=t "general.errors" %> :</p>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <td><%= f.label I18n.t("model.categories.name") %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+  </table>
+  <p class="button"><%= f.submit I18n.t("categories.edit") %></p>
+
+<% end %>
