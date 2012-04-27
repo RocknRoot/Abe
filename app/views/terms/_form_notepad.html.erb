@@ -2,3 +2,9 @@
       <td><%= f.label I18n.t("model.terms.notepad.content") %></td>
       <td><%= f.text_area :content %></td>
     </tr>
+    <script type="text/javascript">
+      CKEDITOR.replace("term_notepad_content", {
+        toolbar : 'TermNotepad',
+        height: "500px"
+      });
+    </script>
