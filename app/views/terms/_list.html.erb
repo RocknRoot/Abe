@@ -1,0 +1,8 @@
+<% @terms.each do |term| %>
+  <%= link_to term.name, term_path(term) %>
+<% end %>
+
+<p class="actions">
+  <%= I18n.t("terms.create").downcase %> :
+  <%= link_to I18n.t("terms.notepad").downcase, term_path(1), :class => "new" %>
+</p>

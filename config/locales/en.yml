@@ -1,19 +1,25 @@
 en:
   general:
     errors: "Errors"
+    explore: "Explore"
 
   categories:
+    category: "Category"
     create: "Add child"
     delete: "Delete"
     delete_confirm: "Are you sure ?"
     edit: "Edit"
     root: "Root"
 
+  terms:
+    create: "Create a new term"
+    notepad: "Notepad"
+
   welcome:
     invalid_login: "Invalid login or password"
     log: "Log"
     loggued_in: "Loggued in!"
-    loggued_out: "Déconnecté..."
+    loggued_out: "Loggued out..."
     signed_up: "Signed up!"
     sign_up: "Sign up"
 

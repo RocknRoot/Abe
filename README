@@ -15,8 +15,9 @@
  *  Homepage:           http://rocknroot.org/content/abe
  *  Version :           0.1-Hilton - under development
 
-  Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia where you can throw notes
-and definitions and maybe organize them later.
+  Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia
+where you can throw notes and definitions and maybe organize them
+later.
 
   You can also share some with friends, set them public and other
 social stuff.
@@ -28,13 +29,21 @@ in the little private internet of yours.
 ##                          INSTALLATION                           ##
 #####################################################################
 
+  We asume that you already have a web server capable of running Ruby
+on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
+
+ $ git clone git://github.com/Nekith/Abe.git abe
+ $ cd abe
+ - edit config/database.yml
+ # bundle install (execute this with root privileges)
+ $ bundle exec rake db:create
+ $ bundle exec rake db:migrate
+ - restart web server (apachectl restart, ...)
 
 #####################################################################
 ##                            INCOMING                             ##
 #####################################################################
 
- *  Categories: you can create categories (like folders) to put
-    others categories or terms into.
  *  Terms: terms are definitions, write down your knowledge.
  *  Tags: term tags
  *  categories/terms operations : move, copy
@@ -45,7 +54,7 @@ in the little private internet of yours.
 ##                            CHANGELOG                            ##
 #####################################################################
 
-0.1-Hilton : development
+0.1-Wilde : development
 
 #####################################################################
 ##                             LICENCE                             ##

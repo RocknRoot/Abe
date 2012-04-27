@@ -33,9 +33,38 @@ html, body {
   #header_content {
     color: #ddd;
     margin-left: 300px;
-    position: relative;
-    top: 5px;
     font-size: 18px;
+    text-transform: lowercase;
+    padding-top: 5px;
+
+    a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    label {
+    }
+
+    input {
+      background-color: white;
+      border: 1px solid black;
+      height: 20px;
+      padding: 0;
+      font-family: 'Della Respira', serif;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      position: relative;
+      top: 2px;
+      height: 22px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
     form {
       display: inline;
@@ -93,6 +122,7 @@ html, body {
     padding-left: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: 0;
     background-color: #d3d1d2;
     border-bottom: 1px solid #aaa;
   }

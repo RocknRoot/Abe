@@ -1,7 +1,7 @@
-<p id="actions">
+<p class="actions">
   <% if params.has_key?(:id) %>
-    <%= link_to I18n.t("categories.edit"), edit_category_path(@category.id), :class => "edit" %>
-    <%= link_to I18n.t("categories.delete"), category_path(@category.id), :method => :delete, :class => "delete", :confirm => I18n.t("categories.delete_confirm") %>
+    <%= link_to I18n.t("categories.edit").downcase, edit_category_path(@category.id), :class => "edit" %>
+    <%= link_to I18n.t("categories.delete").downcase, category_path(@category.id), :method => :delete, :class => "delete", :confirm => I18n.t("categories.delete_confirm") %>
   <% end %>
 </p>
 
@@ -24,8 +24,12 @@
 <!-- new category link !-->
 <%= form_for(@child) do |f| %>
   <span class="category">
+    <%= f.label :name, I18n.t("categories.category").downcase %>
     <%= f.text_field :name %>
     <%= f.hidden_field :parent_id %>
-    <%= f.submit I18n.t("categories.create") %>
+    <%= f.submit I18n.t("categories.create").downcase %>
   </span>
 <% end %>
+
+<!-- render terms !-->
+<%= render "terms/list", :terms => @terms %>

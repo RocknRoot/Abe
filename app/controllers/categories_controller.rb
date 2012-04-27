@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
     @children_categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
     @breadcrumb = t("categories.root")
     @child = Category.new
+    @terms = Term.all(:conditions => "category_id IS NULL", :order => "name")
     render "show"
   end
 
@@ -16,6 +17,7 @@ class CategoriesController < ApplicationController
       @children_categories = @current_user.categories.all(:conditions => [ "parent_id = ?", params[:id] ])
       @child = Category.new
       @child.parent_id = @category.id
+      @terms = Term.all(:conditions => [ "category_id = ?", @category.id ], :order => "name")
       @breadcrumb = "#{@category.name}"
     end
   end

@@ -1,13 +1,19 @@
 fr:
   general:
     errors: "Erreurs"
+    explore: "Explorer"
 
   categories:
+    category: "Catégorie"
     create: "Ajouter"
     delete: "Supprimer"
     delete_confirm: "Etes-vous sûr ?"
     edit: "Modifier"
     root: "Racine"
+
+  terms:
+    create: "Créer un nouveau terme"
+    notepad: "Bloc-notes"
 
   welcome:
     invalid_login: "Login ou mot de passe invalide"

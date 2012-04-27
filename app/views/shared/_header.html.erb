@@ -4,7 +4,7 @@
 
   <div id="header_content">
     <% if current_user %>
-      lol
+      <%= link_to I18n.t("general.explore"), explore_path %>
     <% else %>
       <%= render "shared/login" %>
     <% end %>
