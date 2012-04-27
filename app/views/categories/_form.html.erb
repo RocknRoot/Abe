@@ -4,7 +4,7 @@
     <div class="error_messages">
       <p><%=t "general.errors" %> :</p>
       <ul>
-        <% for message in @user.errors.full_messages %>
+        <% for message in @category.errors.full_messages %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -17,6 +17,7 @@
       <td><%= f.text_field :name %></td>
     </tr>
   </table>
+
   <p class="button"><%= f.submit I18n.t("categories.edit") %></p>
 
 <% end %>

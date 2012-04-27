@@ -7,7 +7,6 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'class-table-inheritance'
 
 # Gems used only for assets and not required
 # in production environments by default.

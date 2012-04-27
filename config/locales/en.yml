@@ -13,6 +13,7 @@ en:
 
   terms:
     create: "Create a new term"
+    edit: "Edit"
     notepad: "Notepad"
 
   welcome:
@@ -27,6 +28,10 @@ en:
     categories:
       name: "Name"
       parent: "Parent"
+    terms:
+      name: "Name"
+      notepad:
+        content: "Content"
     users:
       email: "E-mail address"
       login: "Login"

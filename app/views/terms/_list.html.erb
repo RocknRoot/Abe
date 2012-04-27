@@ -1,8 +1,10 @@
 <% @terms.each do |term| %>
-  <%= link_to term.name, term_path(term) %>
+  <%= link_to edit_term_path(term), :class => "term notepad" do %>
+    <%= term.name %><span class="term_abstract"><%= strip_tags term.abstract %></span>
+  <% end %>
 <% end %>
 
 <p class="actions">
   <%= I18n.t("terms.create").downcase %> :
-  <%= link_to I18n.t("terms.notepad").downcase, term_path(1), :class => "new" %>
+  <%= link_to I18n.t("terms.notepad").downcase, terms_path(:category_id => @category != nil ? @category.id : nil, :type => "notepad"), :method => :post, :class => "new" %>
 </p>

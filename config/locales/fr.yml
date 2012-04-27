@@ -13,6 +13,7 @@ fr:
 
   terms:
     create: "Créer un nouveau terme"
+    edit: "Modifier"
     notepad: "Bloc-notes"
 
   welcome:
@@ -27,6 +28,10 @@ fr:
     categories:
       name: "Nom"
       parent: "Parent"
+    terms:
+      name: "Nom"
+      notepad:
+        content: "Contenu"
     users:
       email: "Adresse e-mail"
       login: "Login"

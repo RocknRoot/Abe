@@ -1,4 +1,5 @@
-class TermNotepad < ActiveRecord::Base
-  inherits_from 'Term'
-  attr_accessible :content
+class TermNotepad < Term
+  def abstract
+    return content[0, 255]
+  end
 end

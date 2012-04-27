@@ -4,8 +4,8 @@ class CreateTerms < ActiveRecord::Migration
       t.string :name
       t.references :user
       t.references :category
-      t.references :parent
       t.boolean :public
+      t.binary :content
       t.string :type
       t.datetime :created_at
       t.datetime :updated_at
@@ -14,6 +14,5 @@ class CreateTerms < ActiveRecord::Migration
     end
     add_index :terms, :user_id
     add_index :terms, :category_id
-    add_index :terms, :parent_id
   end
 end

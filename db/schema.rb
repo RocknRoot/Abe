@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120426154750) do
+ActiveRecord::Schema.define(:version => 20120420140003) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -41,13 +41,6 @@ ActiveRecord::Schema.define(:version => 20120426154750) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "term_notepads", :id => false, :force => true do |t|
-    t.integer  "term_id",    :null => false
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "term_tags", :force => true do |t|
     t.integer  "term_id"
     t.integer  "tag_id"
@@ -63,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120426154750) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.boolean  "public"
+    t.binary   "content"
     t.string   "type"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
