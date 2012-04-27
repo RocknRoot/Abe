@@ -1,19 +1,18 @@
   Table of contents:
-    * Presentation
-    * Installation
-    * Incoming
-    * Changelog
-    * Licence
+    1.  Presentation
+    2.  Installation
+    3.  Changelog
+    4.  Licence
 
 #####################################################################
-##                          PRESENTATION                           ##
+##                       1. PRESENTATION                           ##
 #####################################################################
 
                           Charge Abe, discharge your brain, go party.
 
  *  Public install :    not yet
  *  Homepage:           http://rocknroot.org/content/abe
- *  Version :           0.1-Hilton - under development
+ *  Version :           alpha - 0.1-Wilde
 
   Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia
 where you can throw notes and definitions and maybe organize them
@@ -26,7 +25,7 @@ social stuff.
 in the little private internet of yours.
 
 #####################################################################
-##                          INSTALLATION                           ##
+##                       2. INSTALLATION                           ##
 #####################################################################
 
   We asume that you already have a web server capable of running Ruby
@@ -41,23 +40,15 @@ on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
  - restart web server (apachectl restart, ...)
 
 #####################################################################
-##                            INCOMING                             ##
+##                         3. CHANGELOG                            ##
 #####################################################################
 
- *  Terms: terms are definitions, write down your knowledge.
- *  Tags: term tags
- *  categories/terms operations : move, copy
- *  tinyMCE integration
- *  different terms types
+ * 0.1-Wilde : in development
+     Abe functional base.
+     Users, categories, notepad-terms, tags assignment.
 
 #####################################################################
-##                            CHANGELOG                            ##
-#####################################################################
-
-0.1-Wilde : development
-
-#####################################################################
-##                             LICENCE                             ##
+##                          4. LICENCE                             ##
 #####################################################################
 
  WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
