@@ -20,6 +20,11 @@
 
     <%= render "form_#{@term.type.downcase[4, @term.type.length]}", :f => f, :term => @term %>
 
+    <tr>
+      <td><%= f.label I18n.t("tags") %></td>
+      <td><%= f.text_field :tag_names %></td>
+    </tr>
+
   </table>
 
   <p class="button"><%= f.submit I18n.t("terms.edit") %></p>

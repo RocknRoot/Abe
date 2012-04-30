@@ -1,0 +1,7 @@
+<% if @terms.count != 0 %>
+  <% @terms.each do |t| %>
+    <%= link_to term_path(t), :class => "term #{t.type.downcase[4, t.type.length]}" do %>
+      <%= t.name %><span class="term_abstract"><%= strip_tags t.abstract %></span>
+    <% end %>
+  <% end %>
+<% end %>

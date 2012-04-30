@@ -1,9 +1,49 @@
-// Place all the styles related to the terms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#content {
+  #term_actions {
+    position: relative;
+    top: -31px;
+    border: 0;
+    margin: 0;
+    float: right;
+  }
 
-textarea {
-  padding: 0;
-  width: 800px;
-  height: 500px;
+  #term_tags {
+    display: block;
+    margin: auto;
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #d3d1d2;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 10px;
+  }
+
+  #content_show {
+    width: 90%;
+    margin: auto;
+  }
+
+  textarea {
+    padding: 0;
+    width: 800px;
+    height: 500px;
+  }
+
+  .actions {
+    margin: 0;
+    padding-right: 10px;
+    text-align: right;
+    border-bottom: 1px solid #aaa;
+    padding-top: 10px;
+    height: 20px;
+
+    .edit {
+      color: #b60;
+    }
+
+    .edit:hover {
+      background-color: #b60;
+      color: white;
+    }
+  }
 }

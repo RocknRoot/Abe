@@ -12,7 +12,8 @@ Abe::Application.routes.draw do
     match "/explore"        => "categories#index"
 
     resources :categories, :except => :new
-    resources :terms, :except => [ :index, :show, :new ]
+    resources :terms, :except => [ :index, :new ]
+    resources :tags, :except => [ :index, :new, :create, :edit, :update, :destroy ]
   end
 
   match "/:locale" => "welcome#index"

@@ -1,6 +1,10 @@
 <% @terms.each do |term| %>
-  <%= link_to edit_term_path(term), :class => "term notepad" do %>
-    <%= term.name %><span class="term_abstract"><%= strip_tags term.abstract %></span>
+  <%= link_to term_path(term), :class => "term notepad" do %>
+    <% tags = Array.new
+    term.tags.each do |tag|
+      tags << tag.name
+    end %>
+    <%= term.name %><span class="term_tags"><%= tags.join(', ') %></span>
   <% end %>
 <% end %>
 

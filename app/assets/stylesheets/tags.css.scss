@@ -1,0 +1,27 @@
+#content {
+  .term {
+    color: black;
+    display: block;
+    padding: 5px;
+    padding-left: 15px;
+    height: 20px;
+    border-bottom: 1px solid #aaa;
+    text-decoration: none;
+  }
+
+  .term:hover {
+    background-color: white;
+  }
+
+  .term_abstract {
+    display: block;
+    position: relative;
+    top: -18px;
+    height: 20px;
+    margin-left: 200px;
+    overflow: hidden;
+    color: gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

@@ -43,7 +43,7 @@ on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
 ##                         3. CHANGELOG                            ##
 #####################################################################
 
- * 0.1-Wilde : in development
+ * 0.1-Wilde : stable
      Abe functional base.
      Users, categories, notepad-terms, tags assignment.
 

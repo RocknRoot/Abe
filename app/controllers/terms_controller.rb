@@ -1,11 +1,25 @@
 class TermsController < ApplicationController
   before_filter :user_loggued, :categories
 
-  def create
-    if params[:type].empty?
+  def show
+    @term = Term.find(params[:id])
+    if @term.nil? and !@current_user.categories.include?(@term)
       redirect_to categories_path
     else
-      if !params[:category_id].empty? and @current_user.categories.all(:conditions => [ "id = ?", params[:category_id] ]).count == 0
+      @category = Category.find_by_id(@term.category_id)
+      @breadcrumb = ""
+      if @category != nil
+        @breadcrumb = "#{@category.name} / "
+      end
+      @breadcrumb += "#{@term.name}"
+    end
+  end
+
+  def create
+    if params[:type] == ""
+      redirect_to categories_path
+    else
+      if params.has_key?(:category_id) and params[:category_id] != "" and @current_user.categories.all(:conditions => [ "id = ?", params[:category_id] ]).count == 0
         redirect_to categories_path
       else
         @term = Term.factory(params[:type])
@@ -15,7 +29,9 @@ class TermsController < ApplicationController
           @term.user_id = @current_user.id
           trad = "terms.#{params[:type]}"
           @term.name = "#{t(trad)}"
-          @term.category_id = params[:category_id]
+          if params[:category_id] != ""
+            @term.category_id = params[:category_id]
+          end
           if @term.save
             redirect_to edit_term_path(@term.id)
           else
@@ -46,7 +62,11 @@ class TermsController < ApplicationController
       redirect_to categories_path
     else
       if @term.update_attributes(params[@term.class.name.underscore])
-        redirect_to category_path(@term.category_id)
+        if @term.category_id == nil
+          redirect_to categories_path
+        else
+          redirect_to term_path(@term)
+        end
       else
         render "edit"
       end

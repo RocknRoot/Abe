@@ -15,6 +15,7 @@ en:
     create: "Create a new term"
     edit: "Edit"
     notepad: "Notepad"
+    tags: "Tags"
 
   welcome:
     invalid_login: "Invalid login or password"
@@ -28,6 +29,8 @@ en:
     categories:
       name: "Name"
       parent: "Parent"
+    tags:
+      tag: "Tag"
     terms:
       name: "Name"
       notepad:

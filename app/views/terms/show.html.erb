@@ -1,0 +1,12 @@
+<div id="term_actions" class="actions"><%= link_to I18n.t("terms.edit"), edit_term_path(@term), :class => "edit" %></div>
+
+<div id="term_tags">
+  <%=t "terms.tags" %> :
+  <% @display = Array.new
+    @term.tags.each do |t|
+      @display << (link_to t.name, tag_path(t.id))
+    end %>
+  <%= @display.join(', ').html_safe %>
+</div>
+
+<%= render "show_#{@term.type.downcase[4, @term.type.length]}", :term => @term %>

@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
     @children_categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
     @breadcrumb = t("categories.root")
     @child = Category.new
-    @terms = Term.all(:conditions => "category_id IS NULL", :order => "name")
+    @terms = @current_user.terms.all(:conditions => "category_id IS NULL", :order => "name")
     render "show"
   end
 
