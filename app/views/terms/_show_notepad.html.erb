@@ -1,3 +1,5 @@
 <div id="content_show">
-  <%= sanitize(@term.content, :attributes => %w(id class style dir)).html_safe %>
+  <% if @term.content != nil %>
+    <%= sanitize(@term.content, :attributes => %w(href title id class style dir)).html_safe %>
+  <% end %>
 </div>

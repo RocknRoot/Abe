@@ -1,4 +1,5 @@
     <tr>
       <td><%= f.label I18n.t("model.terms.notepad.content") %></td>
-      <td><%= f.cktext_area :content, :toolbar => 'TermNotepad' %></td>
+      <td><%= f.text_area :content, :class => "tinymce" %></td>
     </tr>
+    <%= tinymce %>

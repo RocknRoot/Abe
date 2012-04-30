@@ -3,16 +3,17 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sqlite3'
-gem "ckeditor", "3.7.0.rc3"
+
+gem 'tinymce-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'libv8', '~> 3.3.10.4', :platform => :ruby
+  gem 'therubyracer', '~> 0.10.1', :platform => :ruby
+  gem 'execjs', '~> 1.3.1', :platform => :ruby
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
   gem 'yui-compressor'
 end
 
