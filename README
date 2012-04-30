@@ -45,7 +45,11 @@ on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
 ##                         3. CHANGELOG                            ##
 #####################################################################
 
- * 0.1-Wilde : stable
+ * 0.2-Connelly : testing
+     User interface modifications.
+     Public mode, draft/publication mode.
+
+ * 0.1-Wilde : alpha
      Abe functional base.
      Users, categories, notepad-terms, tags assignment, tinyMCE.
 
