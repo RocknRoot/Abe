@@ -1,7 +1,10 @@
 fr:
   general:
+    bookmarks: "Favoris"
     errors: "Erreurs"
     explore: "Explorer"
+    yours: "Vos données"
+    welcome: "Accueil"
 
   categories:
     category: "Catégorie"
@@ -10,6 +13,9 @@ fr:
     delete_confirm: "Etes-vous sûr ?"
     edit: "Modifier"
     root: "Racine"
+
+  tags:
+    trends: "Tags populaires"
 
   terms:
     create: "Créer un nouveau terme"
@@ -21,7 +27,8 @@ fr:
 
   welcome:
     invalid_login: "Login ou mot de passe invalide"
-    log: "Log"
+    log: "Connexion"
+    logout: "Se déconnecter"
     loggued_in: "Connecté!"
     loggued_out: "Déconnecté..."
     signed_up: "Enregistré!"

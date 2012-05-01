@@ -74,10 +74,4 @@ class CategoriesController < ApplicationController
       end
     end
   end
-
-  private
-
-  def categories
-    @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
-  end
 end

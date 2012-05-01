@@ -6,12 +6,13 @@
     <% if current_user %>
       <%= link_to I18n.t("general.explore"), explore_path %>
     <% else %>
-      <%= render "shared/login" %>
+      <%= link_to I18n.t("general.welcome"), welcome_path %>
     <% end %>
+    . <%= link_to I18n.t("tags.trends"), tags_path %>
   </div>
 
   <div id="header_version">
-    0.1-Wilde
+    0.2-Connelly
   </div>
 
 </div>

@@ -10,7 +10,19 @@
 
   <%= render "shared/header" %>
 
-  <%= yield %>
+  <%= render "shared/left_bar", :locals => { :categories => @categories } %>
+
+  <div id="content">
+
+    <% if @breadcrumb %>
+      <h1><%= @breadcrumb.downcase %></h1>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+
+  <%= render "shared/footer" %>
 
 </body>
 </html>

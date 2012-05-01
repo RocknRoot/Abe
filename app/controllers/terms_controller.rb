@@ -84,10 +84,4 @@ class TermsController < ApplicationController
       redirect_to category_path(category_id)
     end
   end
-
-  private
-
-  def categories
-    @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
-  end
 end

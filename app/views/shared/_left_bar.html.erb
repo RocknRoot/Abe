@@ -1,8 +1,16 @@
 <div id="left_bar">
-  <p><%= link_to I18n.t("categories.root").downcase, categories_path %></p>
-  <ul>
-    <% @categories.each do |c| %>
-      <%= render "categories/list", :category => c %>
-    <% end %>
-  </ul>
+  <% if current_user %>
+    <p class="section"><%=t "general.yours" %></p>
+    <p><%= link_to I18n.t("categories.root").downcase, categories_path %></p>
+    <ul>
+      <% @categories.each do |c| %>
+        <%= render "categories/list", :category => c %>
+      <% end %>
+    </ul>
+    <p class="section"><%=t "general.bookmarks" %></p>
+    Soon...
+    <p class="section"><%= link_to I18n.t("welcome.logout"), logout_path %></p>
+  <% else %>
+    <%= render "shared/login" %>
+  <% end %>
 </div>

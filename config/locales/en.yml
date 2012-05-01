@@ -1,7 +1,10 @@
 en:
   general:
+    bookmarks: "Bookmarks"
     errors: "Errors"
     explore: "Explore"
+    yours: "Your data"
+    welcome: "Home"
 
   categories:
     category: "Category"
@@ -10,6 +13,9 @@ en:
     delete_confirm: "Are you sure ?"
     edit: "Edit"
     root: "Root"
+
+  tags:
+    trends: "Trends tags"
 
   terms:
     create: "Create a new term"
@@ -22,6 +28,7 @@ en:
   welcome:
     invalid_login: "Invalid login or password"
     log: "Log"
+    logout: "Logout"
     loggued_in: "Loggued in!"
     loggued_out: "Loggued out..."
     signed_up: "Signed up!"

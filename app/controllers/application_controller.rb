@@ -29,4 +29,10 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
+
+  def categories
+    if @current_user
+      @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
+    end
+  end
 end

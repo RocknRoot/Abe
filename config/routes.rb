@@ -17,7 +17,7 @@ Abe::Application.routes.draw do
         get :autocomplete_tag_name
       end
     end
-    resources :tags, :except => [ :index, :new, :create, :edit, :update, :destroy ]
+    resources :tags, :except => [ :new, :create, :edit, :update, :destroy ]
   end
 
   match "/:locale" => "welcome#index"
