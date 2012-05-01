@@ -18,11 +18,11 @@
 where you can throw notes and definitions and maybe organize them
 later.
 
-  You can also share some with friends, set them public and other
+  You can also share some with friends, make them public and other
 social stuff.
 
   Code is free, so if you're paranoid, you can install it at home or
-in the little private internet of yours.
+in that little private internet of yours.
 
 #####################################################################
 ##                       2. INSTALLATION                           ##
@@ -70,4 +70,3 @@ on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE FUCK YOU WANT TO. 
-
