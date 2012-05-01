@@ -1,9 +1,10 @@
 class TermsController < ApplicationController
   before_filter :user_loggued, :categories
+  autocomplete :tag, :name, :full => true, :class_name => 'ActsAsTaggableOn::Tag'
 
   def show
     @term = Term.find(params[:id])
-    if @term.nil? and !@current_user.categories.include?(@term)
+    if @term.nil? and !@current_user.terms.include?(@term)
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
@@ -44,7 +45,7 @@ class TermsController < ApplicationController
 
   def edit
     @term = Term.find(params[:id])
-    if @term.nil? and !@current_user.categories.include?(@term)
+    if @term.nil? and !@current_user.terms.include?(@term)
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
@@ -58,7 +59,7 @@ class TermsController < ApplicationController
 
   def update
     @term = Term.find(params[:id])
-    if @term.nil? and !@current_user.categories.include?(@term)
+    if @term.nil? and !@current_user.terms.include?(@term)
       redirect_to categories_path
     else
       if @term.update_attributes(params[@term.class.name.underscore])
@@ -74,6 +75,14 @@ class TermsController < ApplicationController
   end
 
   def destroy
+    @term = Term.find(params[:id])
+    if @term.nil? and !@current_user.terms.include?(@term)
+      redirect_to categories_path
+    else
+      category_id = @term.category_id
+      @term.destroy
+      redirect_to category_path(category_id)
+    end
   end
 
   private

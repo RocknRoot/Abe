@@ -12,7 +12,11 @@ Abe::Application.routes.draw do
     match "/explore"        => "categories#index"
 
     resources :categories, :except => :new
-    resources :terms, :except => [ :index, :new ]
+    resources :terms, :except => [ :index, :new ] do
+      collection do
+        get :autocomplete_tag_name
+      end
+    end
     resources :tags, :except => [ :index, :new, :create, :edit, :update, :destroy ]
   end
 

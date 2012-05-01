@@ -13,6 +13,8 @@ en:
 
   terms:
     create: "Create a new term"
+    delete: "Delete"
+    delete_confirm: "Are you sure ?"
     edit: "Edit"
     notepad: "Notepad"
     tags: "Tags"

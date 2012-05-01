@@ -4,6 +4,11 @@ gem 'rails', '3.2.3'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sqlite3'
 
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'rails3-jquery-autocomplete'
+gem 'acts-as-taggable-on', '~>2.2.2'
 gem 'tinymce-rails'
 
 group :assets do
@@ -16,8 +21,6 @@ group :assets do
   gem 'uglifier'
   gem 'yui-compressor'
 end
-
-gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'

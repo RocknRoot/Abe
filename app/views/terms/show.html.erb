@@ -1,4 +1,7 @@
-<div id="term_actions" class="actions"><%= link_to I18n.t("terms.edit"), edit_term_path(@term), :class => "edit" %></div>
+<div id="term_actions" class="actions">
+  <%= link_to I18n.t("terms.edit").downcase, edit_term_path(@term), :class => "edit" %>
+  <%= link_to I18n.t("terms.delete").downcase, term_path(@term), :method => "delete", :class => "delete", :confirm => I18n.t("terms.delete_confirm") %>
+</div>
 
 <div id="term_tags">
   <%=t "terms.tags" %> :

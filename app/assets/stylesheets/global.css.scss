@@ -72,6 +72,12 @@ html, body {
   }
 
   #header_version {
+    float: right;
+    position: relative;
+    margin-right: 5px;
+    top: -15px;
+    font-size: 13px;
+    color: #ccc;
   }
 }
 

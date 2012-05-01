@@ -13,6 +13,8 @@ fr:
 
   terms:
     create: "Créer un nouveau terme"
+    delete: "Supprimer"
+    delete_confirm: "Etes-vous sûr ?"
     edit: "Modifier"
     notepad: "Bloc-notes"
     tags: "Tags"

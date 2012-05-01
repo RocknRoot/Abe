@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120420140003) do
+ActiveRecord::Schema.define(:version => 20120501132207) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -35,21 +35,22 @@ ActiveRecord::Schema.define(:version => 20120420140003) do
   add_index "comments", ["term_id"], :name => "index_comments_on_term_id"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
-  create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "term_tags", :force => true do |t|
-    t.integer  "term_id"
+  create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       :limit => 128
+    t.datetime "created_at"
   end
 
-  add_index "term_tags", ["tag_id"], :name => "index_term_tags_on_tag_id"
-  add_index "term_tags", ["term_id"], :name => "index_term_tags_on_term_id"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
   create_table "terms", :force => true do |t|
     t.string   "name"

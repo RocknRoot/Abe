@@ -21,8 +21,8 @@
     <%= render "form_#{@term.type.downcase[4, @term.type.length]}", :f => f, :term => @term %>
 
     <tr>
-      <td><%= f.label I18n.t("tags") %></td>
-      <td><%= f.text_field :tag_names %></td>
+      <td><%= f.label :tag_list, I18n.t("terms.tags") %></td>
+      <td><%= f.autocomplete_field :tag_list, autocomplete_tag_name_terms_path, :"data-delimiter" => ', ' %></td>
     </tr>
 
   </table>
