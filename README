@@ -45,8 +45,8 @@ on Rails applications (keywords : Apache, nginx, mod_passenger, ...).
 ##                         3. CHANGELOG                            ##
 #####################################################################
 
- * 0.2-Connelly : testing
-     User interface modifications.
+ * 0.2-Connelly : under-development
+     User interface modifications, search by tags.
      Public mode, draft/publication mode.
 
  * 0.1-Wilde : alpha
