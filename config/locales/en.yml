@@ -15,7 +15,7 @@ en:
     root: "Root"
 
   tags:
-    trends: "Trends tags"
+    trends: "Trending tags"
 
   terms:
     create: "Create a new term"
