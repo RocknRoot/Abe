@@ -16,7 +16,25 @@
   <div id="content">
 
     <% if @breadcrumb %>
-      <h1><%= @breadcrumb.downcase %></h1>
+      <p id="breadcrumb">
+      <% if @breadcrumb.kind_of?(Array) %>
+        <% links = Array.new
+        @breadcrumb.each do |c|
+          if c.kind_of?(Category)
+            links << (link_to c.name, category_path(c.id))
+          else
+            links << (link_to c, categories_path)
+          end
+        end %>
+        <%= links.join(' > ').html_safe %>
+      <% else %>
+        <%= @breadcrumb %>
+      <% end %>
+      </p>
+    <% end %>
+
+    <% if @title %>
+      <h1><%= @title %></h1>
     <% end %>
 
     <%= yield %>

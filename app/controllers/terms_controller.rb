@@ -9,15 +9,13 @@ class TermsController < ApplicationController
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
-      if @current_user and @current_user.id != @term.user_id
-        @breadcrumb = ""
+      generate_breadcrumb(@term.category)
+      if @current_user and @current_user.id == @term.user_id
+        @title = ""
       else
-        @breadcrumb = "#{@term.user.login} # "
+        @title = "#{@term.user.login} # "
       end
-      if @category != nil
-        @breadcrumb += "#{@category.name} / "
-      end
-      @breadcrumb += "#{@term.name}"
+      @title += "#{@term.name}"
     end
   end
 
@@ -54,11 +52,8 @@ class TermsController < ApplicationController
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
-      @breadcrumb = ""
-      if @category != nil
-        @breadcrumb = "#{@category.name} / "
-      end
-      @breadcrumb += "#{@term.name} / #{t("terms.edit")}"
+      generate_breadcrumb(@term.category)
+      @title += "#{@term.name} . #{t("terms.edit")}"
     end
   end
 
@@ -74,6 +69,8 @@ class TermsController < ApplicationController
           redirect_to term_path(@term)
         end
       else
+        generate_breadcrumb(@term.category)
+        @title += "#{@term.name} . #{t("terms.edit")}"
         render "edit"
       end
     end

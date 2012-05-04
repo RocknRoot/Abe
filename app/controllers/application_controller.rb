@@ -35,4 +35,16 @@ class ApplicationController < ActionController::Base
       @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
     end
   end
+
+  def generate_breadcrumb(category)
+    @breadcrumb = Array.new
+    @breadcrumb << category
+    @parent = category.parent
+    while @parent
+      @breadcrumb << @parent
+      @parent = @parent.parent
+    end
+    @breadcrumb << t("categories.root").downcase
+    @breadcrumb = @breadcrumb.reverse
+  end
 end

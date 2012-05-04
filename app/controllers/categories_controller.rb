@@ -3,7 +3,8 @@ class CategoriesController < ApplicationController
 
   def index
     @children_categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
-    @breadcrumb = t("categories.root")
+    @breadcrumb = t("categories.root").downcase
+    @title = t("categories.root").downcase
     @child = Category.new
     @terms = @current_user.terms.all(:conditions => "category_id IS NULL", :order => "name")
     render "show"
@@ -18,7 +19,8 @@ class CategoriesController < ApplicationController
       @child = Category.new
       @child.parent_id = @category.id
       @terms = Term.all(:conditions => [ "category_id = ?", @category.id ], :order => "name")
-      @breadcrumb = "#{@category.name}"
+      generate_breadcrumb(@category)
+      @title = "#{@category.name}"
     end
   end
 
@@ -43,7 +45,8 @@ class CategoriesController < ApplicationController
     if @category.nil? and !@current_user.categories.include?(@category)
       redirect_to categories_path
     else
-      @breadcrumb = "#{@category.name} / #{t("categories.edit")}"
+      generate_breadcrumb(@category)
+      @title = "#{@category.name} . #{t("categories.edit")}"
     end
   end
 
@@ -55,6 +58,8 @@ class CategoriesController < ApplicationController
       if @category.update_attributes(params[:category])
         redirect_to category_path(@category)
       else
+        generate_breadcrumb(@category)
+        @title = "#{@category.name} . #{t("categories.edit")}"
         render "edit"
       end
     end

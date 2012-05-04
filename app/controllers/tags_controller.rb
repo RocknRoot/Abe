@@ -10,11 +10,12 @@ class TagsController < ApplicationController
       redirect_to tags_path
     else
       if @current_user
-        @terms = @tag.terms.all(:conditions => [ "user_id = ? OR public = ?", @current_user.id, true ])
+        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "user_id = ? OR public = ?", @current_user.id, true ])
       else
-        @terms = Term.all(:conditions => [ "public = ?", true ])
+        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "public = ?", true ])
       end
-      @breadcrumb = "#{t("model.tags.tag")} / #{@tag.name}"
+      @breadcrumb = "#{t("terms.tags")}"
+      @title = @tag.name
     end
   end
 end
