@@ -11,8 +11,10 @@
     . <%= link_to I18n.t("tags.trends"), tags_path %>
   </div>
 
-  <div id="header_version">
-    0.1-Wilde
+  <div id="header_search">
+    <%= form_tag search_index_path, :method => 'get' do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag I18n.t("general.search"), :name => nil %>
+    <% end %>
   </div>
-
 </div>

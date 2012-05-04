@@ -1,0 +1,44 @@
+<div id="search_redo">
+  <%= form_tag search_index_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag I18n.t("general.search"), :name => nil %>
+  <% end %>
+</div>
+
+<!-- categories !-->
+<% if current_user %>
+  <h2><%=t "categories.categories" %></h2>
+  <% if @found_categories.empty? %>
+    <p><%=t "general.search_nothing" %></p>
+  <% else %>
+    <% @found_categories.each do |c| %>
+      <%= link_to c.name, category_path(c.id), :class => "category" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<!-- tags !-->
+<h2><%=t "tags.tags" %></h2>
+<% if @found_tags.empty? %>
+  <p><%=t "general.search_nothing" %></p>
+<% else %>
+  <% @found_tags.each do |t| %>
+    <%= link_to t.name, tag_path(t.id), :class => "term" %>
+  <% end %>
+<% end %>
+
+<!-- terms --!>
+<h2><%=t "terms.terms" %></h2>
+<% if @found_terms.empty? %>
+  <p><%=t "general.search_nothing" %></p>
+<% else %>
+  <% @found_terms.each do |t| %>
+    <%= link_to term_path(t), :class => "term #{t.type.downcase[4, t.type.length]}" do %>
+      <% tags = Array.new
+      t.tags.each do |tag|
+        tags << tag.name
+      end %>
+      <%= t.name %><span class="term_tags"><%= tags.join(', ') %></span>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,5 +1,5 @@
 <% @terms.each do |term| %>
-  <%= link_to term_path(term), :class => "term notepad" do %>
+  <%= link_to term_path(term), :class => "term #{term.type.downcase[4, term.type.length]}" do %>
     <% tags = Array.new
     term.tags.each do |tag|
       tags << tag.name

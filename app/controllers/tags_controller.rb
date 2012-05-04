@@ -14,7 +14,7 @@ class TagsController < ApplicationController
       else
         @terms = Term.tagged_with(@tag.name).all(:conditions => [ "public = ?", true ])
       end
-      @breadcrumb = "#{t("terms.tags")}"
+      @breadcrumb = "#{t("tags.tags")}"
       @title = @tag.name
     end
   end

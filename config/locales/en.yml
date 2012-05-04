@@ -3,11 +3,14 @@ en:
     bookmarks: "Bookmarks"
     errors: "Errors"
     explore: "Explore"
+    search: "Search"
+    search_nothing: "No result"
     yours: "Your data"
     welcome: "Home"
 
   categories:
     category: "Category"
+    categories: "Categories"
     create: "Add child"
     delete: "Delete"
     delete_confirm: "Are you sure ?"
@@ -15,6 +18,7 @@ en:
     root: "Root"
 
   tags:
+    tags: "Tags"
     trends: "Trending tags"
 
   terms:
@@ -28,7 +32,7 @@ en:
       private_confirm: "Are you sure to make this term private ?"
       public: "Public"
       public_confirm: "Are you sure to make this term public ?"
-    tags: "Tags"
+    terms: "Terms"
 
   welcome:
     invalid_login: "Invalid login or password"

@@ -3,11 +3,14 @@ fr:
     bookmarks: "Favoris"
     errors: "Erreurs"
     explore: "Explorer"
+    search: "Chercher"
+    search_nothing: "Aucun résultat"
     yours: "Vos données"
     welcome: "Accueil"
 
   categories:
     category: "Catégorie"
+    categories: "Catégories"
     create: "Ajouter"
     delete: "Supprimer"
     delete_confirm: "Etes-vous sûr ?"
@@ -15,6 +18,7 @@ fr:
     root: "Racine"
 
   tags:
+    tags: "Tags"
     trends: "Tags populaires"
 
   terms:
@@ -28,7 +32,7 @@ fr:
       private_confirm: "Etes-vous sûr de rendre ce terme privé ?"
       public: "Public"
       public_confirm: "Etes-vous sûr de rendre ce terme public ?"
-    tags: "Tags"
+    terms: "Termes"
 
   welcome:
     invalid_login: "Login ou mot de passe invalide"

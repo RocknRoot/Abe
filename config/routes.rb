@@ -3,7 +3,7 @@ Abe::Application.routes.draw do
   root :to => "welcome#index"
 
   scope "(:locale)" do
-    # welcome
+
     match "/welcome"        => "welcome#index"
     match "/login"          => "welcome#login"
     match "/logout"         => "welcome#logout"
@@ -11,14 +11,19 @@ Abe::Application.routes.draw do
     match "/signup_create"  => "welcome#signup_create"
     match "/explore"        => "categories#index"
 
+    get "search/index"
+
     resources :categories, :except => :new
+
     resources :terms, :except => [ :index, :new ] do
       get :toggle_public
       collection do
         get :autocomplete_tag_name
       end
     end
+
     resources :tags, :except => [ :new, :create, :edit, :update, :destroy ]
+
   end
 
   match "/:locale" => "welcome#index"

@@ -71,13 +71,16 @@ html, body {
     }
   }
 
-  #header_version {
+  #header_search {
     float: right;
+    margin-right: 40px;
     position: relative;
-    margin-right: 5px;
-    top: -15px;
-    font-size: 13px;
-    color: #ccc;
+    top: -25px;
+
+    input {
+      background-color: #d3d1d2;
+      border: 1px solid #aaa;
+    }
   }
 }
 
@@ -87,6 +90,7 @@ html, body {
   position: fixed;
   top: 40px;
   left: 0;
+  overflow: auto;
   background-color: #f3f1f2;
   box-shadow: 1px 0 3px #555;
   -webkit-box-shadow: 1px 0 3px #555;
@@ -157,4 +161,34 @@ html, body {
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #aaa;
   }
+
+  h2 {
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    border-bottom: 1px solid #aaa;
+  }
+
+  input {
+    background-color: white;
+    border: 1px solid #aaa;
+  }
+}
+
+#footer {
+  margin: auto;
+  text-align: center;
+  color: #aaa;
+  margin-top: 200px;
+  margin-bottom: 50px;
+
+  a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #333;
+}
 }
