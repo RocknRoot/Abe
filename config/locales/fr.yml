@@ -23,6 +23,11 @@ fr:
     delete_confirm: "Etes-vous sûr ?"
     edit: "Modifier"
     notepad: "Bloc-notes"
+    publicness:
+      private: "Privé"
+      private_confirm: "Etes-vous sûr de rendre ce terme privé ?"
+      public: "Public"
+      public_confirm: "Etes-vous sûr de rendre ce terme public ?"
     tags: "Tags"
 
   welcome:

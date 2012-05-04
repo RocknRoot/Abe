@@ -1,16 +1,21 @@
 class TermsController < ApplicationController
-  before_filter :user_loggued, :categories
+  before_filter :user_loggued, :except => :show
+  before_filter :categories
   autocomplete :tag, :name, :full => true, :class_name => 'ActsAsTaggableOn::Tag'
 
   def show
     @term = Term.find(params[:id])
-    if @term.nil? and !@current_user.terms.include?(@term)
+    if @term.nil? and !@current_user.terms.include?(@term) and !@term.public
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
-      @breadcrumb = ""
+      if @current_user and @current_user.id != @term.user_id
+        @breadcrumb = ""
+      else
+        @breadcrumb = "#{@term.user.login} # "
+      end
       if @category != nil
-        @breadcrumb = "#{@category.name} / "
+        @breadcrumb += "#{@category.name} / "
       end
       @breadcrumb += "#{@term.name}"
     end
@@ -71,6 +76,17 @@ class TermsController < ApplicationController
       else
         render "edit"
       end
+    end
+  end
+
+  def toggle_public
+    @term = Term.find(params[:term_id])
+    if @term.nil? and !@current_user.terms.include?(@term)
+      redirect_to categories_path
+    else
+      @term.public = !@term.public;
+      @term.save
+      redirect_to term_path(@term)
     end
   end
 

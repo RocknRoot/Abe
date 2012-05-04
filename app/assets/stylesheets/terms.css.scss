@@ -37,6 +37,24 @@
     padding-top: 10px;
     height: 20px;
 
+    .public_false {
+      color: black;
+    }
+
+    .public_false:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .public_true {
+      color: #038;
+    }
+
+    .public_true:hover {
+      background-color: #038;
+      color: white;
+    }
+
     .edit {
       color: #b60;
     }

@@ -1,6 +1,13 @@
 <div id="term_actions" class="actions">
-  <%= link_to I18n.t("terms.edit").downcase, edit_term_path(@term), :class => "edit" %>
-  <%= link_to I18n.t("terms.delete").downcase, term_path(@term), :method => "delete", :class => "delete", :confirm => I18n.t("terms.delete_confirm") %>
+  <% if current_user and @term.user_id == current_user.id %>
+    <% if @term.public %>
+      <%= link_to I18n.t("terms.publicness.public").downcase, term_toggle_public_path(@term), :class => "public_true", :confirm => I18n.t("terms.publicness.private_confirm") %>
+    <% else %>
+      <%= link_to I18n.t("terms.publicness.private").downcase, term_toggle_public_path(@term), :class => "public_false", :confirm => I18n.t("terms.publicness.public_confirm") %>
+    <% end %>
+    <%= link_to I18n.t("terms.edit").downcase, edit_term_path(@term), :class => "edit" %>
+    <%= link_to I18n.t("terms.delete").downcase, term_path(@term), :method => "delete", :class => "delete", :confirm => I18n.t("terms.delete_confirm") %>
+  <% end %>
 </div>
 
 <div id="term_tags">

@@ -1,7 +1,14 @@
 <% if @terms.count != 0 %>
   <% @terms.each do |t| %>
     <%= link_to term_path(t), :class => "term #{t.type.downcase[4, t.type.length]}" do %>
-      <%= t.name %><span class="term_abstract"><%= strip_tags t.abstract %></span>
+      <% if !current_user or current_user.id != t.user_id %>
+        <%= t.user.login %> #
+      <% end %>
+      <% tags = Array.new
+      t.tags.each do |tag|
+        tags << tag.name
+      end %>
+      <%= t.name %><span class="term_tags"><%= tags.join(', ') %></span>
     <% end %>
   <% end %>
 <% end %>

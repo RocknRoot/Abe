@@ -12,7 +12,7 @@ class TagsController < ApplicationController
       if @current_user
         @terms = @tag.terms.all(:conditions => [ "user_id = ? OR public = ?", @current_user.id, true ])
       else
-        @terms = Term.all(:conditions => [ "public = ?", false ])
+        @terms = Term.all(:conditions => [ "public = ?", true ])
       end
       @breadcrumb = "#{t("model.tags.tag")} / #{@tag.name}"
     end

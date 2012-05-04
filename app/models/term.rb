@@ -7,6 +7,8 @@ class Term < ActiveRecord::Base
   belongs_to :category
   has_many :comments, :dependent => :destroy
 
+  default_scope :order => 'name'
+
   def self.factory(type)
     term = nil
     if type == "notepad"

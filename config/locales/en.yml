@@ -23,6 +23,11 @@ en:
     delete_confirm: "Are you sure ?"
     edit: "Edit"
     notepad: "Notepad"
+    publicness:
+      private: "Private"
+      private_confirm: "Are you sure to make this term private ?"
+      public: "Public"
+      public_confirm: "Are you sure to make this term public ?"
     tags: "Tags"
 
   welcome:

@@ -13,6 +13,7 @@ Abe::Application.routes.draw do
 
     resources :categories, :except => :new
     resources :terms, :except => [ :index, :new ] do
+      get :toggle_public
       collection do
         get :autocomplete_tag_name
       end
