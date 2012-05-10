@@ -10,9 +10,9 @@ class TagsController < ApplicationController
       redirect_to tags_path
     else
       if @current_user
-        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "user_id = ? OR public = ?", @current_user.id, true ])
+        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "user_id = ? OR public = ?", @current_user.id, true ], :order => "name")
       else
-        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "public = ?", true ])
+        @terms = Term.tagged_with(@tag.name).all(:conditions => [ "public = ?", true ], :order => "name")
       end
       @breadcrumb = "#{t("tags.tags")}"
       @title = @tag.name

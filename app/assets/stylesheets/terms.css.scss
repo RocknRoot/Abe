@@ -21,6 +21,51 @@
   #content_show {
     width: 90%;
     margin: auto;
+
+    h1 {
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-bottom: 1px solid #aaa;
+      border-left: 1px solid #aaa;
+      background-color: #e3e1e2;
+      font-size: 26px;
+    }
+
+    h2 {
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin: 0;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 0;
+      border-bottom: 1px solid #aaa;
+      background-color: #e3e1e2;
+      font-size: 20px;
+    }
+
+    h3 {
+      padding: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 0;
+      margin-left: 35px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 0;
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   textarea {

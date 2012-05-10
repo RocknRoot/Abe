@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
 
   def categories
     if @current_user
-      @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
+      @categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ], :order => "name")
     end
   end
 

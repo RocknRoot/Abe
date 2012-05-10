@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_filter :user_loggued, :categories
 
   def index
-    @children_categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ])
+    @children_categories = @current_user.categories.all(:conditions => [ "parent_id IS NULL" ], :order => "name")
     @breadcrumb = t("categories.root").downcase
     @title = t("categories.root").downcase
     @child = Category.new
@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
     if @category.nil? and !@current_user.categories.include?(@category)
       redirect_to categories_path
     else
-      @children_categories = @current_user.categories.all(:conditions => [ "parent_id = ?", params[:id] ])
+      @children_categories = @current_user.categories.all(:conditions => [ "parent_id = ?", params[:id] ], :order => "name")
       @child = Category.new
       @child.parent_id = @category.id
       @terms = Term.all(:conditions => [ "category_id = ?", @category.id ], :order => "name")
@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    if params[:category][:parent_id] != "" and @current_user.categories.all(:conditions => [ "id = ?", params[:category][:parent_id] ]).count == 0
+    if params[:category][:parent_id] != "" and @current_user.categories.find(:conditions => [ "id = ?", params[:category][:parent_id] ]).count == 0
       redirect_to categories_path
     else
       @category = Category.new

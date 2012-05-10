@@ -10,15 +10,15 @@ class SearchController < ApplicationController
     end
     # categories
     if @current_user
-      @found_categories = @current_user.categories.all(:conditions => [ "name LIKE ?", "%#{params["search"]}%" ])
+      @found_categories = @current_user.categories.all(:conditions => [ "name LIKE ?", "%#{params["search"]}%" ], :order => "name")
     end
     # tags
-    @found_tags = ActsAsTaggableOn::Tag.all(:conditions => [ "name LIKE ?", "%#{params["search"]}%" ])
+    @found_tags = ActsAsTaggableOn::Tag.all(:conditions => [ "name LIKE ?", "%#{params["search"]}%" ], :order => "name")
     # terms
     if @current_user
-      @found_terms = Term.all(:conditions => [ "name LIKE ? AND (user_id = ? OR public = ?)", "%#{params["search"]}%", @current_user.id, true ])
+      @found_terms = Term.all(:conditions => [ "name LIKE ? AND (user_id = ? OR public = ?)", "%#{params["search"]}%", @current_user.id, true ], :order => "name")
     else
-      @found_terms = Term.all(:conditions => [ "name LIKE ? AND public = ?", "%#{params["search"]}%", true ])
+      @found_terms = Term.all(:conditions => [ "name LIKE ? AND public = ?", "%#{params["search"]}%", true ], :order => "name")
     end
   end
 end
