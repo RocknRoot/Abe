@@ -25,7 +25,8 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    if params[:category][:parent_id] != "" and @current_user.categories.find(:conditions => [ "id = ?", params[:category][:parent_id] ]).count == 0
+    id = params[:category][:parent_id]
+    if params[:category][:parent_id] != "" and @current_user.categories.find(params[:category][:parent_id]) == nil
       redirect_to categories_path
     else
       @category = Category.new

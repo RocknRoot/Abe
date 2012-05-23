@@ -27,7 +27,7 @@ class TermsController < ApplicationController
     if params[:type] == ""
       redirect_to categories_path
     else
-      if params.has_key?(:category_id) and params[:category_id] != "" and @current_user.categories.all(:conditions => [ "id = ?", params[:category_id] ]).count == 0
+      if params.has_key?(:category_id) and params[:category_id] != "" and @current_user.categories.find(params[:category_id]) == nil
         redirect_to categories_path
       else
         @term = Term.factory(params[:type])
