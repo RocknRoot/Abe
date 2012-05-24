@@ -8,7 +8,4 @@
   <% end %>
 <% end %>
 
-<p class="actions">
-  <%= I18n.t("terms.create").downcase %> :
-  <%= link_to I18n.t("terms.notepad").downcase, terms_path(:category_id => @category != nil ? @category.id : nil, :type => "notepad"), :method => :post, :class => "new" %>
-</p>
+<%= render "terms/list_new", :category => @category %>
