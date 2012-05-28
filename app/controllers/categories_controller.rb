@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by_id(params[:id])
-    if @category.nil? and !@current_user.categories.include?(@category)
+    if @category.nil? and @category.user != @current_user.id
       redirect_to categories_path
     else
       @children_categories = @current_user.categories.all(:conditions => [ "parent_id = ?", params[:id] ], :order => "name")
