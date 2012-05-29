@@ -37,14 +37,19 @@ class ApplicationController < ActionController::Base
   end
 
   def generate_breadcrumb(category)
-    @breadcrumb = Array.new
-    @breadcrumb << category
-    @parent = category.parent
-    while @parent
-      @breadcrumb << @parent
-      @parent = @parent.parent
+    if @category.user_id != @current_user.id
+      @breadcrumb = Array.new
+      @breadcrumb << @current_user.login
+    else
+      @breadcrumb = Array.new
+      @breadcrumb << category
+      @parent = category.parent
+      while @parent
+        @breadcrumb << @parent
+        @parent = @parent.parent
+      end
+      @breadcrumb << t("categories.root").downcase
+      @breadcrumb = @breadcrumb.reverse
     end
-    @breadcrumb << t("categories.root").downcase
-    @breadcrumb = @breadcrumb.reverse
   end
 end
