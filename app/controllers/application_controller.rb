@@ -37,9 +37,9 @@ class ApplicationController < ActionController::Base
   end
 
   def generate_breadcrumb(category)
-    if @category.user_id != @current_user.id
+    if !session[:user_id] or category.user_id != session[:user_id]
       @breadcrumb = Array.new
-      @breadcrumb << @current_user.login
+      @breadcrumb << category.user
     else
       @breadcrumb = Array.new
       @breadcrumb << category

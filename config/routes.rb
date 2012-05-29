@@ -24,6 +24,8 @@ Abe::Application.routes.draw do
 
     resources :tags, :except => [ :new, :create, :edit, :update, :destroy ]
 
+    resources :users, :except => [ :new, :create, :destroy ]
+
   end
 
   match "/:locale" => "welcome#index"

@@ -19,11 +19,13 @@
       <p id="breadcrumb">
       <% if @breadcrumb.kind_of?(Array) %>
         <% links = Array.new
-        @breadcrumb.each do |c|
-          if c.kind_of?(Category)
-            links << (link_to c.name, category_path(c.id))
+        @breadcrumb.each do |e|
+          if e.kind_of?(Category)
+            links << (link_to e.name, category_path(e.id))
+          elsif e.kind_of?(User)
+            links << (link_to e.login, user_path(e.id))
           else
-            links << (link_to c, categories_path)
+            links << (link_to e, categories_path)
           end
         end %>
         <%= links.join(' > ').html_safe %>
