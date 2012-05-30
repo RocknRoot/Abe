@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @current_user.id != params[:id].to_i or params[:user].include?(:created_at) or params[:user].include?(:email) or params[:user].include?(:login) or params[:user].include?(:salt)
+    if @current_user.id != params[:id].to_i or params[:user].has_key?(:created_at) or params[:user].has_key?(:email) or params[:user].has_key?(:login) or params[:user].has_key?(:salt)
       redirect_to users_path
     else
       if params[:user][:old_password] != "" and BCrypt::Engine.hash_secret(params[:user][:old_password], @current_user.salt) == @current_user.password

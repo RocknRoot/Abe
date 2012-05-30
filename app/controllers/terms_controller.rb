@@ -70,7 +70,7 @@ class TermsController < ApplicationController
     if @term.nil? and !@current_user.terms.include?(@term)
       redirect_to categories_path
     else
-      if params[:term].include?(:created_at) or params[:term].include?(:type)
+      if params[@term.class.name.underscore].has_key?(:created_at) or params[@term.class.name.underscore].has_key?(:type)
         redirect_to categories_path
       else
         if @term.update_attributes(params[@term.class.name.underscore])
