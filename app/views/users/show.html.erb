@@ -1,0 +1,20 @@
+<div id="user_actions" class="actions">
+  <% if current_user and @user.id == current_user.id %>
+    <%= link_to I18n.t("users.edit").downcase, edit_user_path(@user), :class => "edit" %>
+  <% end %>
+</div>
+
+<div id="user_info">
+  <%=t "users.created_at" %> <%= @user.created_at.strftime("%d / %m / %y") %>
+</div>
+
+<h2><%=t "terms.terms" %></h2>
+<% @terms.each do |term| %>
+  <%= link_to term_path(term), :class => "term #{term.type.downcase[4, term.type.length]}" do %>
+    <% tags = Array.new
+    term.tags.each do |tag|
+      tags << tag.name
+    end %>
+    <%= term.name %><span class="term_tags"><%= tags.join(', ') %></span>
+  <% end %>
+<% end %>

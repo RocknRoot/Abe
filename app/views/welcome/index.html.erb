@@ -1,9 +1,13 @@
 <h1>Welcome</h1>
+
 <% if flash[:notice] %>
   <p class="notice"><%= flash[:notice] %></p>
 <% end %>
 <% if flash[:error] %>
-  <p class="error"><%= flash[:error] %></p>
+  <p class="notice error"><%= flash[:error] %></p>
 <% end %>
-<p>Why sign up, blablabla</p>
+
+<p>Amazing Brain Extension</p>
+<p>Charge Abe, discharge your brain, go party.</p>
+
 <p style="align: center;"><%= link_to I18n.t("welcome.sign_up"), signup_path %></p>

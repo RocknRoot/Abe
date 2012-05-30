@@ -34,6 +34,13 @@ fr:
       public_confirm: "Etes-vous sûr de rendre ce terme public ?"
     terms: "Termes"
 
+  users:
+    created_at: "Inscris depuis le"
+    edit: "Modifier"
+    me: "Mon profil"
+    profile: "Profil"
+    trends: "Utilisateurs populaires"
+
   welcome:
     invalid_login: "Login ou mot de passe invalide"
     log: "Connexion"
@@ -56,4 +63,6 @@ fr:
     users:
       email: "Adresse e-mail"
       login: "Login"
+      new_password: "Nouveau mot de passe"
+      old_password: "Ancien mot de passe"
       password: "Mot de passe"

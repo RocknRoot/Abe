@@ -1,0 +1,36 @@
+#content {
+  #user_actions {
+    position: relative;
+    top: -31px;
+    border: 0;
+    margin: 0;
+    float: right;
+  }
+
+  #user_info {
+    display: block;
+    margin: auto;
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #d3d1d2;
+    border-bottom: 1px solid #aaa;
+  }
+
+  .actions {
+    margin: 0;
+    padding-right: 10px;
+    text-align: right;
+    border-bottom: 1px solid #aaa;
+    padding-top: 10px;
+
+    .edit {
+      color: #b60;
+    }
+
+    .edit:hover {
+      background-color: #b60;
+      color: white;
+    }
+  }
+}

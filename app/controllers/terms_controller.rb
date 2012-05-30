@@ -70,20 +70,24 @@ class TermsController < ApplicationController
     if @term.nil? and !@current_user.terms.include?(@term)
       redirect_to categories_path
     else
-      if @term.update_attributes(params[@term.class.name.underscore])
-        if @term.category_id == nil
-          redirect_to categories_path
-        else
-          redirect_to term_path(@term)
-        end
+      if params[:term].include?(:created_at) or params[:term].include?(:type)
+        redirect_to categories_path
       else
-        if @term.category == nil
-          @breadcrumb = t("categories.root")
+        if @term.update_attributes(params[@term.class.name.underscore])
+          if @term.category_id == nil
+            redirect_to categories_path
+          else
+            redirect_to term_path(@term)
+          end
         else
-          generate_breadcrumb(@term.category)
+          if @term.category == nil
+            @breadcrumb = t("categories.root")
+          else
+            generate_breadcrumb(@term.category)
+          end
+          @title = "#{@term.name} . #{t("terms.edit")}"
+          render "edit"
         end
-        @title = "#{@term.name} . #{t("terms.edit")}"
-        render "edit"
       end
     end
   end

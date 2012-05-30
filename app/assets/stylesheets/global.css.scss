@@ -134,6 +134,16 @@ html, body {
     margin-left: -10px;
     padding-left: 10px;
   }
+
+  input {
+    border: 1px solid #aaa;
+    height: 19px;
+  }
+
+  input[type="submit"] {
+    margin: auto;
+    width: 190px;
+  }
 }
 
 #content {

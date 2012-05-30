@@ -9,6 +9,9 @@
     </ul>
     <p class="section"><%=t "general.bookmarks" %></p>
     Soon...
+    <!--<p># new ones</p>
+    <p># all</p>!-->
+    <p class="section"><%= link_to I18n.t("users.me"), user_path(current_user) %></p>
     <p class="section"><%= link_to I18n.t("welcome.logout"), logout_path %></p>
   <% else %>
     <%= render "shared/login" %>

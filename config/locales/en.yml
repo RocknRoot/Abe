@@ -34,6 +34,13 @@ en:
       public_confirm: "Are you sure to make this term public ?"
     terms: "Terms"
 
+  users:
+    created_at: "Subscribed since"
+    edit: "Edit"
+    me: "My profile"
+    profile: "Profile"
+    trends: "Trending users"
+
   welcome:
     invalid_login: "Invalid login or password"
     log: "Log"
@@ -56,4 +63,6 @@ en:
     users:
       email: "E-mail address"
       login: "Login"
+      new_password: "New password"
+      old_password: "Old password"
       password: "Password"
