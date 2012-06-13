@@ -14,6 +14,12 @@ You can also share some with friends, make them public and other social stuff.
 Code is free, so if you're paranoid, you can install it at home or in that little private internet
 of yours. Or just participate to the development. Fork us !
 
+## Requirements
+
+Tested with Ruby :
+
+* 1.9.3
+
 ## Installation
 
 We asume that you already have a web server capable of running Ruby on Rails applications (keywords
@@ -28,12 +34,6 @@ We asume that you already have a web server capable of running Ruby on Rails app
     $ bundle exec rake assets:precompile RAILS_ENV=production
     - restart web server (apachectl restart, ...)
 
-## Requirements
-
-Tested with Ruby :
-
-* 1.9.3
-
 ## Need help ?
 
 Add an issue on github ! ;)
@@ -41,10 +41,12 @@ Add an issue on github ! ;)
 ## Changelog
 
 * 0.2-Connelly : under-development
+
     User interface modifications, search.
     Public mode, user profile view, comments.
 
 * 0.1-Wilde : alpha
+
     Abe functional base.
     Users, categories, notepad-terms, tags assignment, tinyMCE.
 
