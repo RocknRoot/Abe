@@ -5,7 +5,7 @@
 </div>
 
 <div id="user_info">
-  <%=t "users.created_at" %> <%= @user.created_at.strftime("%d / %m / %y") %>
+  <%=t "users.created_at" %> <%= l @user.created_at, :format => (@user.created_at.time() <= 1.year.ago ? "%d %B %y" : "%d %B") %>
 </div>
 
 <h2><%=t "terms.terms" %></h2>
@@ -15,6 +15,8 @@
     term.tags.each do |tag|
       tags << tag.name
     end %>
-    <%= term.name %><span class="term_tags"><%= tags.join(', ') %></span>
+    <%= term.name %>
+    <span class="term_tags"><%= tags.join(', ') %></span>
+    <span class="term_date"><%= l term.updated_at, :format => (term.updated_at.time() <= 1.year.ago ? "%d %B %y" : ( term.updated_at.today?() ? "%H:%M" : "%d %B")) %></span>
   <% end %>
 <% end %>

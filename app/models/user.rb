@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :created_at, :email, :login, :password, :salt
+  attr_accessible :created_at, :email, :login, :password, :salt, :time_zone
 
   before_save :encrypt_password
 

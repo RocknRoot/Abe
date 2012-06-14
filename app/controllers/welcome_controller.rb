@@ -12,6 +12,7 @@ class WelcomeController < ApplicationController
   def signup_create
     go_to_root_if_loggued
     @user = User.new(params[:user])
+    @user.time_zone = "UTC"
     if @user.save
       redirect_to root_url, :notice => t("welcome.signed_up")
     else

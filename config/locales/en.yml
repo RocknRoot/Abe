@@ -66,3 +66,4 @@ en:
       new_password: "New password"
       old_password: "Old password"
       password: "Password"
+      time_zone: "Time zone"

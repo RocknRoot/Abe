@@ -4,7 +4,9 @@
     term.tags.each do |tag|
       tags << tag.name
     end %>
-    <%= term.name %><span class="term_tags"><%= tags.join(', ') %></span>
+    <%= term.name %>
+    <span class="term_tags"><%= tags.join(', ') %></span>
+    <span class="term_date"><%= l term.updated_at, :format => (term.updated_at.time() <= 1.year.ago ? "%d %B %y" : ( term.updated_at.today?() ? "%H:%M" : "%d %B")) %></span>
   <% end %>
 <% end %>
 

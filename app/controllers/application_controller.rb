@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :current_user, :set_locale
+  before_filter :current_user, :set_locale, :set_user_time_zone
   helper_method :current_user
 
   def user_loggued
@@ -28,6 +28,10 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def set_user_time_zone
+    Time.zone = @current_user.time_zone if @current_user
   end
 
   def categories
