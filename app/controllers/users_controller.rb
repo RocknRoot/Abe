@@ -46,7 +46,7 @@ class UsersController < ApplicationController
         end
       else
         params[:user].delete(:old_password)
-        params[:user].delete(:new_password)
+        params[:user].delete(:password)
         if @current_user.update_attributes(params[:user])
           redirect_to user_path(@current_user)
         else
