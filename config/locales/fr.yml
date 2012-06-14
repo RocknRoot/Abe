@@ -37,6 +37,7 @@ fr:
   users:
     created_at: "Inscris depuis le"
     edit: "Modifier"
+    edit_wrong_old_pass: "Ancien mot de passe incorrect"
     me: "Mon profil"
     profile: "Profil"
     trends: "Utilisateurs populaires"

@@ -37,6 +37,7 @@ en:
   users:
     created_at: "Subscribed since"
     edit: "Edit"
+    edit_wrong_old_pass: "Wrong old password"
     me: "My profile"
     profile: "Profile"
     trends: "Trending users"

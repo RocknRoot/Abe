@@ -25,13 +25,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @current_user.id != params[:id].to_i or params[:user].has_key?(:created_at) or params[:user].has_key?(:email) or params[:user].has_key?(:login) or params[:user].has_key?(:salt)
+    if @current_user.id != params[:id].to_i
       redirect_to users_path
     else
       if params[:user][:old_password] != ""
         if BCrypt::Engine.hash_secret(params[:user][:old_password], @current_user.salt) == @current_user.password
           params[:user].delete(:old_password)
-          if @current_user.update_attributes(params[:user])
+          @current_user.password = params[:user][:password]
+          @current_user.encrypt_password
+          @current_user.time_zone = params[:user][:time_zone]
+          if @current_user.save
             redirect_to user_path(@current_user)
           else
             @breadcrumb = [ @current_user ]
@@ -41,13 +44,13 @@ class UsersController < ApplicationController
         else
           @breadcrumb = [ @current_user ]
           @title = "#{@current_user.login} . #{t("users.edit")}"
-          @user.errors << t("users.edit_wrong_old_pass")
+          @current_user.errors.add(:password, t("users.edit_wrong_old_pass"))
           render "edit"
         end
       else
         params[:user].delete(:old_password)
         params[:user].delete(:password)
-        if @current_user.update_attributes(params[:user])
+        if @current_user.update_attribute(:time_zone, params[:user][:time_zone])
           redirect_to user_path(@current_user)
         else
           @breadcrumb = [ @current_user ]

@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :created_at, :email, :login, :password, :salt, :time_zone
 
-  before_save :encrypt_password
-
   validates_confirmation_of :password
   validates_presence_of     :login
   validates_presence_of     :password, :on => :create
