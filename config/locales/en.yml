@@ -41,6 +41,7 @@ en:
     me: "My profile"
     profile: "Profile"
     trends: "Trending users"
+    users: "Users"
 
   welcome:
     invalid_login: "Invalid login or password"

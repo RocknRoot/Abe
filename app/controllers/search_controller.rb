@@ -14,6 +14,12 @@ class SearchController < ApplicationController
     end
     # tags
     @found_tags = ActsAsTaggableOn::Tag.all(:conditions => [ "name LIKE ?", "%#{params["search"]}%" ], :order => "name")
+    # users
+    if @current_user
+      @found_users = User.all(:conditions => [ "login LIKE ? and id != ?", "%#{params["search"]}%", @current_user.id ] )
+    else
+      @found_users = User.all(:conditions => [ "login LIKE ?", "%#{params["search"]}%" ] )
+    end
     # terms
     if @current_user
       @found_terms = Term.all(:conditions => [ "name LIKE ? AND (user_id = ? OR public = ?)", "%#{params["search"]}%", @current_user.id, true ], :order => "name")

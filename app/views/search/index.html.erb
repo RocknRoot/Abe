@@ -39,6 +39,14 @@
   <% end %>
 <% end %>
 
+<!-- users !-->
+<% if !@found_users.empty? %>
+  <h2><%=t "users.users" %></h2>
+  <% @found_users.each do |u| %>
+    <%= link_to u.login, user_path(u), :class => "category" %>
+  <% end %>
+<% end %>
+
 <% if (!current_user or @found_categories.empty?) and @found_tags.empty? and @found_terms.empty? %>
   <p><%=t "general.search_nothing" %></p>
 <% end %>
