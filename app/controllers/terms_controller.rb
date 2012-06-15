@@ -5,7 +5,7 @@ class TermsController < ApplicationController
 
   def show
     @term = Term.find(params[:id])
-    if @term.nil? and (!@current_user or @current_user.id != @term.user_id) and !@term.public
+    if @term.nil? or (!@term.public and (!@current_user or @current_user.id != @term.user_id))
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
