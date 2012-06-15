@@ -4,12 +4,13 @@ gem 'rails', '3.2.6'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sqlite3'
 gem 'mysql2', '~> 0.3.11'
+gem 'acts-as-taggable-on', '~> 2.2.2'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'rails3-jquery-autocomplete'
-gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'tinymce-rails'
+gem 'google-code-prettify-rails', '~> 1.1.0'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.5'

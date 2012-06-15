@@ -5,7 +5,7 @@ class TermsController < ApplicationController
 
   def show
     @term = Term.find(params[:id])
-    if @term.nil? and !@current_user.terms.include?(@term) and !@term.public
+    if @term.nil? and (!@current_user or @current_user.id != @term.user_id) and !@term.public
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
@@ -74,11 +74,7 @@ class TermsController < ApplicationController
         redirect_to categories_path
       else
         if @term.update_attributes(params[@term.class.name.underscore])
-          if @term.category_id == nil
-            redirect_to categories_path
-          else
-            redirect_to term_path(@term)
-          end
+          redirect_to term_path(@term)
         else
           if @term.category == nil
             @breadcrumb = t("categories.root")
@@ -110,7 +106,11 @@ class TermsController < ApplicationController
     else
       category_id = @term.category_id
       @term.destroy
-      redirect_to category_path(category_id)
+      if category_id
+        redirect_to category_path(category_id)
+      else
+        redirect_to categories_path
+      end
     end
   end
 end

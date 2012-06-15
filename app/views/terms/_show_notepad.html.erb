@@ -1,5 +1,13 @@
 <div id="content_show">
   <% if @term.content != nil %>
-    <%= sanitize(@term.content, :attributes => %w(href title id class style dir)).html_safe %>
+    <%= sanitize(@term.content,
+                 :tags => %w(pre code table tr td p em strong),
+                 :attributes => %w(href title id class style dir)).html_safe %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#content_show').find('pre').addClass('prettyprint');
+  });
+</script>

@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require jquery.ui.all
+ *= require google-code-prettify-rails/sons-of-obsidian
  *= require_tree .
 */

@@ -15,4 +15,5 @@
 //= require jquery.ui.all
 //= require autocomplete-rails
 //= require tinymce
+//= require google-code-prettify-rails/prettify
 //= require_tree .
