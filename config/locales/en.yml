@@ -26,6 +26,7 @@ en:
     delete: "Delete"
     delete_confirm: "Are you sure ?"
     edit: "Edit"
+    last_update: "Last update"
     notepad: "Notepad"
     publicness:
       private: "Private"

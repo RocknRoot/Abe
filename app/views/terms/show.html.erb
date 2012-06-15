@@ -11,7 +11,9 @@
 </div>
 
 <div id="term_tags">
-  <%=t "tags.tags" %> :
+  <%=t "terms.last_update" %> :
+  <%= l @term.updated_at, :format => (@term.updated_at.time() <= 1.year.ago ? "%d %B %y" : ( @term.updated_at.today?() ? "%H:%M" : "%d %B")) %>
+  - <%=t "tags.tags" %> :
   <% display = Array.new
     @term.tags.each do |t|
       display << (link_to t.name, tag_path(t.id))
