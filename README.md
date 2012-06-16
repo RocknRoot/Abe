@@ -34,6 +34,12 @@ We asume that you already have a web server capable of running Ruby on Rails app
     $ bundle exec rake assets:precompile RAILS_ENV=production
     - restart web server (apachectl restart, ...)
 
+## Troubleshooting
+
+If you have a problem during mysql2 gem installation (On Debian/Ubuntu):
+
+    sudo apt-get install libmysqlclient-dev
+
 ## Need help ?
 
 Add an issue on github ! ;)
@@ -55,7 +61,7 @@ Add an issue on github ! ;)
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
        Version 2, December 2004
 
-Copyright (C) 2012 Sam Hocevar <sam@hocevar.net>
+Copyright (C) 2012 Valerian Cubero <nekith@rocknroot.org>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
