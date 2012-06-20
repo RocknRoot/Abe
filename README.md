@@ -34,7 +34,7 @@ We asume that you already have a web server capable of running Ruby on Rails app
     $ bundle exec rake assets:precompile RAILS_ENV=production
     - restart web server (apachectl restart, ...)
 
-## Troubleshooting
+### Troubleshooting
 
 If you have a problem during mysql2 gem installation (On Debian/Ubuntu):
 
@@ -48,13 +48,11 @@ Add an issue on github ! ;)
 
 * 0.2-Connelly : under-development
 
-    User interface modifications, search.
-    Public mode, user profile view, comments.
+    Search box, Google Prettifier, public mode, user profile view, comments.
 
 * 0.1-Wilde : alpha
 
-    Abe functional base.
-    Users, categories, notepad-terms, tags assignment, tinyMCE.
+    Abe functional base, users, categories, notepad-terms, tags assignment, tinyMCE.
 
 ## Licence
 
