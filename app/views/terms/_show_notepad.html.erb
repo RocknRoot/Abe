@@ -1,7 +1,7 @@
 <div id="content_show">
   <% if @term.content != nil %>
     <%= sanitize(@term.content,
-                 :tags => %w(pre code table tr td p em strong h1 h2 h3 i u b),
+                 :tags => %w(pre code table tr td p em strong h1 h2 h3 i u b li ul),
                  :attributes => %w(href title id class style dir)).html_safe %>
   <% end %>
 </div>
