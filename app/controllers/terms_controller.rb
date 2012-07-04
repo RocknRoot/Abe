@@ -16,10 +16,13 @@ class TermsController < ApplicationController
       end
       if @current_user and @current_user.id == @term.user_id
         @title = ""
+        @comments = @term.comments.all(:order => "created_at")
       else
         @title = "#{@term.user.login} # "
+        @comments = @term.comments.all(:conditions => [ "approved = ?", true ], :order => "created_at")
       end
       @title += "#{@term.name}"
+      @comment = Comment.new
     end
   end
 

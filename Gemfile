@@ -11,6 +11,7 @@ gem 'jquery-ui-rails'
 gem 'rails3-jquery-autocomplete'
 gem 'tinymce-rails'
 gem 'google-code-prettify-rails', '~> 1.1.0'
+gem 'gravatar_image_tag'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.5'

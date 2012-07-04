@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, :on => :create
   validates_presence_of     :email
   validates_uniqueness_of   :email
+  validates_format_of       :email,
+                            :with => /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\Z/i
   validates_uniqueness_of   :login
 
   has_many :tags

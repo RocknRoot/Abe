@@ -22,6 +22,10 @@ Abe::Application.routes.draw do
       end
     end
 
+    resources :comments, :except => [ :index, :show, :new, :edit, :update ] do
+      get :toggle_approved
+    end
+
     resources :tags, :except => [ :new, :create, :edit, :update, :destroy ]
 
     resources :users, :except => [ :new, :create, :destroy ]

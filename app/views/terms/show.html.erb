@@ -22,3 +22,11 @@
 </div>
 
 <%= render "show_#{@term.type.downcase[4, @term.type.length]}", :term => @term %>
+
+<div id="comments">
+  <%= render "comments/list", :term => @term, :comments => @comments %>
+
+  <% if @current_user %>
+    <%= render 'comments/form', :term => @term, :comment => @comment %>
+  <% end %>
+</div>

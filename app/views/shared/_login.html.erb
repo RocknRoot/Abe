@@ -1,3 +1,5 @@
+<p class="section"><%=t "welcome.log" %></p>
+
 <%= form_tag login_url do %>
 
   <table>
@@ -17,3 +19,7 @@
   <%= submit_tag I18n.t("welcome.log") %>
 
 <% end %>
+
+<p class="section"><%= link_to I18n.t("welcome.lost_password"), signup_path %></p>
+
+<p class="section"><%= link_to I18n.t("welcome.sign_up"), signup_path %></p>

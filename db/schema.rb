@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614093508) do
+ActiveRecord::Schema.define(:version => 20120616144202) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(:version => 20120614093508) do
     t.integer  "term_id"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.boolean  "approved",   :default => true
   end
 
   add_index "comments", ["term_id"], :name => "index_comments_on_term_id"
@@ -59,8 +60,9 @@ ActiveRecord::Schema.define(:version => 20120614093508) do
     t.boolean  "public"
     t.binary   "content"
     t.string   "type"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.boolean  "accept_comment", :default => true
   end
 
   add_index "terms", ["category_id"], :name => "index_terms_on_category_id"

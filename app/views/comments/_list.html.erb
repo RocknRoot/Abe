@@ -1,0 +1,19 @@
+<% @comments.each do |comment| %>
+  <% if comment.approved or (@current_user and @current_user.id == @term.user_id) %>
+    <div class="comment<%= ' comment_hidden' if not comment.approved %>">
+      <div class="comment_avatar">
+        <%= gravatar_image_tag(comment.user.email) %>
+      </div>
+      <div class="comment_content">
+        <p class="comment_content_header">
+          <%= link_to comment.user.login, user_path(comment.user_id) %>
+          - <%= l comment.updated_at, :format => (comment.updated_at.time() <= 1.year.ago ? "%d %B %y" : ( comment.updated_at.today?() ? "%H:%M" : "%d %B")) %>
+          <% if @current_user and @current_user.id == @term.user_id %>
+            - <%= link_to comment.approved ? I18n.t("comments.hide") : I18n.t("comments.show"), comment_toggle_approved_path(comment.id) %>
+          <% end %>
+        </p>
+        <%= sanitize(simple_format(comment.content), :tags => %w(p br)) %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

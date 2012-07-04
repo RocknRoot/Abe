@@ -17,6 +17,11 @@ en:
     edit: "Edit"
     root: "Root"
 
+  comments:
+    create: "Send"
+    hide: "Hide"
+    show: "Show"
+
   tags:
     tags: "Tags"
     trends: "Trending tags"
@@ -46,10 +51,11 @@ en:
 
   welcome:
     invalid_login: "Invalid login or password"
-    log: "Log"
+    log: "Login"
     logout: "Logout"
     loggued_in: "Loggued in!"
     loggued_out: "Loggued out..."
+    lost_password: "Lost your password ?"
     signed_up: "Signed up!"
     sign_up: "Sign up"
 

@@ -17,6 +17,11 @@ fr:
     edit: "Modifier"
     root: "Racine"
 
+  comments:
+    create: "Envoyer"
+    hide: "Cacher"
+    show: "Afficher"
+
   tags:
     tags: "Tags"
     trends: "Tags populaires"
@@ -50,6 +55,7 @@ fr:
     logout: "Se déconnecter"
     loggued_in: "Connecté!"
     loggued_out: "Déconnecté..."
+    lost_password: "Mot de passe oublié ?"
     signed_up: "Enregistré!"
     sign_up: "S'enregistrer"
 

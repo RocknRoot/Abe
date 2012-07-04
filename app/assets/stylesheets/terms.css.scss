@@ -123,4 +123,89 @@
       color: white;
     }
   }
+
+  #comments {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+    .comment {
+      background-color: #f3f1f2;
+      border: 1px solid #aaa;
+      padding: 7px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 90%;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+      min-height: 110px;
+
+      .comment_avatar {
+        float: left;
+        max-width: 86px;
+        padding: 3px;
+        padding-bottom: 0px;
+        background-color: #d3d1d2;
+        border: 1px solid #aaa;
+      }
+
+      .comment_content {
+        margin-left: 100px;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        p.comment_content_header {
+          border-bottom: 1px solid #aaa;
+        }
+      }
+    }
+
+    .comment_hidden {
+      color: #888;
+      border: 1px solid #bbb;
+
+      a {
+        color: #888 !important;
+      }
+
+      img {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+    }
+
+    form {
+      display: block;
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    textarea {
+      height: 60px;
+      padding: 7px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 45px;
+      font-family: Times New Roman, serif;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
 }
