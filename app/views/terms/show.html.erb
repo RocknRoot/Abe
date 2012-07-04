@@ -26,7 +26,7 @@
 <div id="comments">
   <%= render "comments/list", :term => @term, :comments => @comments %>
 
-  <% if @current_user %>
+  <% if @current_user and (@term.accept_comment or @term.user_id == @current_user.id) %>
     <%= render 'comments/form', :term => @term, :comment => @comment %>
   <% end %>
 </div>

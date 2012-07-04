@@ -66,6 +66,7 @@ fr:
     tags:
       tag: "Tag"
     terms:
+      accept_comment: "Accepte les commentaires des autres"
       name: "Nom"
       notepad:
         content: "Contenu"

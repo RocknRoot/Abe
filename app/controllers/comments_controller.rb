@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
       @comment = Comment.new
       @comment.term_id = params[:comment][:term]
       term = Term.find(params[:comment][:term])
-      if term.nil? or (!term.public and (!@current_user or @current_user.id != term.user_id))
+      if term.nil? or ((!term.public or !term.accept_comment) and @current_user.id != term.user_id)
         redirect_to categories_path
       else
         @comment.content = params[:comment][:content]

@@ -25,6 +25,11 @@
       <td><%= f.autocomplete_field :tag_list, autocomplete_tag_name_terms_path, :"data-delimiter" => ', ' %></td>
     </tr>
 
+    <tr>
+      <td><%= f.label :accept_comment, I18n.t("model.terms.accept_comment") %></td>
+      <td><%= f.check_box :accept_comment %></td>
+    </tr>
+
   </table>
 
   <p class="button"><%= f.submit I18n.t("terms.edit") %></p>

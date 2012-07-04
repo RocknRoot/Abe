@@ -1,7 +1,7 @@
 class Term < ActiveRecord::Base
   acts_as_taggable_on :tags
   attr_accessible :tag_list
-  attr_accessible :created_at, :name, :public, :type, :content, :updated_at
+  attr_accessible :created_at, :name, :public, :type, :content, :updated_at, :accept_comment
 
   belongs_to :user
   belongs_to :category
