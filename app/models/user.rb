@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  require 'securerandom'
   attr_accessible :created_at, :email, :login, :password, :salt, :time_zone
 
   validates_confirmation_of :password
@@ -28,5 +29,10 @@ class User < ActiveRecord::Base
       self.salt = BCrypt::Engine.generate_salt
       self.password = BCrypt::Engine.hash_secret(password, salt)
     end
+  end
+
+  def send_password_reset
+    self.password_reset_token = SecureRandom.base64.tr("+/", "-_")
+    self.password_reset_time = Time.zone.now
   end
 end

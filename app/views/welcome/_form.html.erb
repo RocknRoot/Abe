@@ -24,6 +24,10 @@
       <td><%= f.label I18n.t("model.users.password") %></td>
       <td><%= f.password_field :password %></td>
     </tr>
+    <tr>
+      <td><%= f.label I18n.t("model.users.time_zone") %></td>
+      <td><%= f.time_zone_select :time_zone %></td>
+    </tr>
   </table>
   <p class="button"><%= f.submit I18n.t("welcome.sign_up") %></p>
 <% end %>

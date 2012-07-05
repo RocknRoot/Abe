@@ -10,6 +10,7 @@
           - <%= l comment.updated_at, :format => (comment.updated_at.time() <= 1.year.ago ? "%d %B %y" : ( comment.updated_at.today?() ? "%H:%M" : "%d %B")) %>
           <% if @current_user and @current_user.id == @term.user_id %>
             - <%= link_to comment.approved ? I18n.t("comments.hide") : I18n.t("comments.show"), comment_toggle_approved_path(comment.id) %>
+            - <%= link_to I18n.t("comments.destroy"), comment_path(comment), :method => "delete", :confirm => I18n.t("comments.destroy_confirm") %>
           <% end %>
         </p>
         <%= sanitize(simple_format(comment.content), :tags => %w(p br)) %>

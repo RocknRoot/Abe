@@ -3,6 +3,7 @@ fr:
     bookmarks: "Favoris"
     errors: "Erreurs"
     explore: "Explorer"
+    or: "Ou"
     search: "Chercher"
     search_nothing: "Aucun résultat"
     yours: "Vos données"
@@ -19,6 +20,8 @@ fr:
 
   comments:
     create: "Envoyer"
+    destroy: "Supprimer"
+    destroy_confirm: "Etes-vous sûr ?"
     hide: "Cacher"
     show: "Afficher"
 
@@ -40,6 +43,10 @@ fr:
       public_confirm: "Etes-vous sûr de rendre ce terme public ?"
     terms: "Termes"
 
+  user_mailer:
+    password_reset: "Redéfinition de mot de passe"
+    password_reset_sentence: "Il semble que vous ayez demandé une redéfinition de votre mot de passe. Si ce n'est pas le cas, vous pouvez ignorer cet email. Sinon, veuillez cliquer sur ce lien :"
+
   users:
     created_at: "Inscris depuis le"
     edit: "Modifier"
@@ -56,6 +63,11 @@ fr:
     loggued_in: "Connecté!"
     loggued_out: "Déconnecté..."
     lost_password: "Mot de passe oublié ?"
+    lost_password_help: "Entrez votre login ou adresse email pour recevoir un nouveau mot de passe par email."
+    lost_password_notfound: "Aucun compte trouvé"
+    lost_password_send: "Envoyer"
+    lost_password_sent: "Email envoyé ! Vérifiez votre boîte de réception."
+    lost_password_success: "Mot de passe correctement modifié ! Vous pouvez vous connecter."
     signed_up: "Enregistré!"
     sign_up: "S'enregistrer"
 
@@ -71,6 +83,7 @@ fr:
       notepad:
         content: "Contenu"
     users:
+      check_password: "Confirmation du mot de passe"
       email: "Adresse e-mail"
       login: "Login"
       new_password: "Nouveau mot de passe"

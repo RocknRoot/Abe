@@ -3,6 +3,7 @@ en:
     bookmarks: "Bookmarks"
     errors: "Errors"
     explore: "Explore"
+    or: "Or"
     search: "Search"
     search_nothing: "No result"
     yours: "Your data"
@@ -19,6 +20,8 @@ en:
 
   comments:
     create: "Send"
+    destroy: "Delete"
+    destroy_confirm: "Are you sure ?"
     hide: "Hide"
     show: "Show"
 
@@ -40,6 +43,10 @@ en:
       public_confirm: "Are you sure to make this term public ?"
     terms: "Terms"
 
+  user_mailer:
+    password_reset: "Password reset"
+    password_reset_sentence: "It seems that you have asked a password reset. If you havn't, you can ignore this email. Otherwise, please click on this link :"
+
   users:
     created_at: "Subscribed since"
     edit: "Edit"
@@ -56,6 +63,11 @@ en:
     loggued_in: "Loggued in!"
     loggued_out: "Loggued out..."
     lost_password: "Lost your password ?"
+    lost_password_help: "Enter login or email address to receive a new password by email."
+    lost_password_notfound: "No account found"
+    lost_password_send: "Send"
+    lost_password_sent: "Email sent ! Check your inbox."
+    lost_password_success: "Password successfully changed ! You can log in."
     signed_up: "Signed up!"
     sign_up: "Sign up"
 
@@ -71,6 +83,7 @@ en:
       notepad:
         content: "Content"
     users:
+      check_password: "Password confirmation"
       email: "E-mail address"
       login: "Login"
       new_password: "New password"

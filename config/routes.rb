@@ -4,12 +4,16 @@ Abe::Application.routes.draw do
 
   scope "(:locale)" do
 
-    match "/welcome"        => "welcome#index"
-    match "/login"          => "welcome#login"
-    match "/logout"         => "welcome#logout"
-    match "/signup"         => "welcome#signup"
-    match "/signup_create"  => "welcome#signup_create"
-    match "/explore"        => "categories#index"
+    match "/welcome"                        => "welcome#index"
+    match "/login"                          => "welcome#login"
+    match "/logout"                         => "welcome#logout"
+    match "/signup"                         => "welcome#signup"
+    match "/lost_password"                  => "welcome#lost_password"
+    match "/lost_password_send"             => "welcome#lost_password_send"
+    match "/lost_password_use/:token"       => "welcome#lost_password_use", :as => :lost_password_use
+    match "lost_password_use_valid/:token"  => "welcome#lost_password_use_valid", :as => :lost_password_use_valid
+    match "/signup_create"                  => "welcome#signup_create"
+    match "/explore"                        => "categories#index"
 
     get "search/index"
 

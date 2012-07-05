@@ -35,4 +35,15 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    if comment.nil? or @current_user.id != comment.term.user_id
+      redirect_to categories_path
+    else
+      term_id = comment.term.id
+      comment.destroy
+      redirect_to term_path(term_id)
+    end
+  end
 end
