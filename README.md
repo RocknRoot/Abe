@@ -37,7 +37,7 @@ We asume that you already have a web server capable of running Ruby on Rails app
 
 ### Troubleshooting
 
-If you have a problem during mysql2 gem installation (On Debian/Ubuntu):
+If you have a problem during mysql2 gem installation (On Debian/Ubuntu) :
 
     sudo apt-get install libmysqlclient-dev
 
@@ -45,9 +45,11 @@ If you have a problem during mysql2 gem installation (On Debian/Ubuntu):
 
 Add an issue on github ! ;)
 
-## Changelog
+## Versions
 
 * 0.3-Reilly : under-development
+
+    Available on master branch. Generally, it's the public install version.
 
 * 0.2-Connelly : alpha
 

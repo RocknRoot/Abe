@@ -1,6 +1,6 @@
 <div id="left_bar">
   <% if current_user %>
-    <p class="section"><%= link_to I18n.t("general.yours"), categories_path %></p>
+    <p class="section"><%= link_to I18n.t("users.me"), user_path(current_user) %></p>
     <p><%= link_to I18n.t("categories.root").downcase, categories_path %></p>
     <ul>
       <% @categories.each do |c| %>
@@ -11,7 +11,6 @@
     Soon...
     <!--<p># new ones</p>
     <p># all</p>!-->
-    <p class="section"><%= link_to I18n.t("users.me"), user_path(current_user) %></p>
     <p class="section"><%= link_to I18n.t("welcome.logout"), logout_path %></p>
   <% else %>
     <%= render "shared/login" %>
