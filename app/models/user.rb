@@ -35,4 +35,13 @@ class User < ActiveRecord::Base
     self.password_reset_token = SecureRandom.base64.tr("+/", "-_")
     self.password_reset_time = Time.zone.now
   end
+
+  def to_param
+    "#{login}"
+  end
+
+  def self.find_by_slug(param)
+    find_by_login(param)
+  end
+
 end

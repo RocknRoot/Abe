@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_slug(params[:id])
     if @user.nil?
       redirect_to users_path
     else
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if @current_user.id != params[:id].to_i
+    if @current_user.login != params[:id]
       redirect_to users_path
     else
       @breadcrumb = [ @current_user ]
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @current_user.id != params[:id].to_i
+    if @current_user.login != params[:id]
       redirect_to users_path
     else
       if params[:user][:old_password] != ""

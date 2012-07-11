@@ -21,4 +21,9 @@ class Term < ActiveRecord::Base
   def abstract
     raise NotImplementedError
   end
+
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+
 end
