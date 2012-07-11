@@ -1,6 +1,6 @@
 <div id="left_bar">
   <% if current_user %>
-    <p class="section"><%=t "general.yours" %></p>
+    <p class="section"><%= link_to I18n.t("general.yours"), categories_path %></p>
     <p><%= link_to I18n.t("categories.root").downcase, categories_path %></p>
     <ul>
       <% @categories.each do |c| %>
