@@ -21,9 +21,9 @@
         <% links = Array.new
         @breadcrumb.each do |e|
           if e.kind_of?(Category)
-            links << (link_to e.name, category_path(e.id))
+            links << (link_to e.name, category_path(e))
           elsif e.kind_of?(User)
-            links << (link_to e.login, user_path(e.id))
+            links << (link_to e.login, user_path(e))
           else
             links << (link_to e, categories_path)
           end
