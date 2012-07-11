@@ -19,7 +19,15 @@ class ApplicationController < ActionController::Base
   private
 
   def default_url_options(options={})
-    { :locale => I18n.locale }
+    # When User is logged in
+    if !@current_user.nil?
+       { :locale => @current_user.language.to_sym }
+    # Directly after loggin, @current_user is not set when user is redirected to explore_path
+    elsif session[:user_id]
+      { :locale => User.find(session[:user_id]).language.to_sym }
+    else
+      { :locale => I18n.locale }
+    end
   end
 
   def current_user

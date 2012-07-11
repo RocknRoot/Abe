@@ -28,6 +28,11 @@
       <td><%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all %></td>
     </tr>
 
+    <tr>
+      <td><%= f.label I18n.t("models.users.language") %></td>
+      <td><%= f.select :language, User::LANGUAGES_FOR_SELECT %></td>
+    </tr>
+
   </table>
 
   <p class="button"><%= f.submit I18n.t("users.edit") %></p>

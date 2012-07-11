@@ -1,6 +1,12 @@
 class User < ActiveRecord::Base
   require 'securerandom'
-  attr_accessible :created_at, :email, :login, :password, :salt, :time_zone
+
+  # If you add some languages in locale files, add them here too. ;)
+  LANGUAGES = ["fr", "en"]
+  LANGUAGES_FOR_SELECT = [[ "Francais", "fr"],
+                          [ "English", "en" ]]
+
+  attr_accessible :created_at, :email, :login, :password, :salt, :time_zone, :language
 
   validates_confirmation_of :password
   validates_presence_of     :login
@@ -10,6 +16,7 @@ class User < ActiveRecord::Base
   validates_format_of       :email,
                             :with => /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\Z/i
   validates_uniqueness_of   :login
+  validates_inclusion_of    :language, :in => LANGUAGES
 
   has_many :tags
   has_many :comments, :dependent => :nullify

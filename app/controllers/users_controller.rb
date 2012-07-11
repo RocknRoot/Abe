@@ -34,6 +34,7 @@ class UsersController < ApplicationController
           @current_user.password = params[:user][:password]
           @current_user.encrypt_password
           @current_user.time_zone = params[:user][:time_zone]
+          @current_user.language = params[:user][:language]
           if @current_user.save
             redirect_to user_path(@current_user)
           else
@@ -50,7 +51,8 @@ class UsersController < ApplicationController
       else
         params[:user].delete(:old_password)
         params[:user].delete(:password)
-        if @current_user.update_attribute(:time_zone, params[:user][:time_zone])
+        if @current_user.update_attributes(:time_zone => params[:user][:time_zone],
+                                           :language => params[:user][:language])
           redirect_to user_path(@current_user)
         else
           @breadcrumb = [ @current_user ]
