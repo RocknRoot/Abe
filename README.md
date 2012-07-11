@@ -4,7 +4,7 @@ Charge Abe, discharge your brain, go party.
 
 * Public install : http://abe.rocknroot.org
 * Homepage : http://rocknroot.org/content/abe
-* Version : alpha - 0.1-Wilde
+* Version : alpha - 0.2-Connelly
 
 Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia where you can throw notes and
 definitions and maybe organize them later.
@@ -18,6 +18,7 @@ of yours. Or just participate to the development. Fork us !
 
 Tested with Ruby :
 
+* 1.9.2
 * 1.9.3
 
 ## Installation
@@ -46,11 +47,13 @@ Add an issue on github ! ;)
 
 ## Changelog
 
-* 0.2-Connelly : under-development
+* 0.3-Reilly : under-development
+
+* 0.2-Connelly : alpha
 
     Search box, Google Prettifier, public mode, user profile view, comments.
 
-* 0.1-Wilde : alpha
+* 0.1-Wilde : deprecated
 
     Abe functional base, users, categories, notepad-terms, tags assignment, tinyMCE.
 

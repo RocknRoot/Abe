@@ -9,8 +9,13 @@ class TermsController < ApplicationController
       redirect_to categories_path
     else
       @category = Category.find_by_id(@term.category_id)
-      if @category == nil
-        @breadcrumb = t("categories.root")
+      if @category.nil?
+        if @current_user and @current_user.id == @term.user_id
+          @breadcrumb = t("categories.root")
+        else
+          @breadcrumb = Array.new
+          @breadcrumb << @term.user
+        end
       else
         generate_breadcrumb(@category)
       end
