@@ -26,7 +26,7 @@ Tested with Ruby :
 We asume that you already have a web server capable of running Ruby on Rails applications (keywords
 : Apache, nginx, mod_passenger, ...).
 
-    $ git clone git://github.com/Nekith/Abe.git abe
+    $ git clone git://github.com/RocknRoot/Abe.git abe
     $ cd abe
     - edit config/database.yml with coherent data
     # bundle install (execute this with root privileges)
