@@ -64,7 +64,7 @@ Add an issue on github ! ;)
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
        Version 2, December 2004
 
-Copyright (C) 2012 Valerian Cubero <nekith@rocknroot.org>
+Copyright (C) 2012 Nekith <nekith@rocknroot.org>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
