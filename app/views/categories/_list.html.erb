@@ -1,6 +1,6 @@
 <li><%= link_to category.name, category_path(category.id) %>
   <ul>
-    <% Category.find(:all, :conditions => [ "parent_id = ?", category.id ]).each do |child| %>
+    <% Category.find(:all, :conditions => [ "parent_id = ?", category.id ], :order => "name").each do |child| %>
       <%= render "categories/list", :category => child %>
     <% end %>
   </ul>
