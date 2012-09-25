@@ -53,7 +53,7 @@ Add an issue on github ! ;)
 
 * 0.2-Connelly : alpha
 
-    Search box, Google Prettifier, public mode, user profile view, comments.
+    Search box, Google Prettifier, public mode for terms, user profile view, comments.
 
 * 0.1-Wilde : deprecated
 
