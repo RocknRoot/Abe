@@ -59,7 +59,7 @@ Add an issue on github ! ;)
 
     Abe functional base, users, categories, notepad-terms, tags assignment, tinyMCE.
 
-## Licence
+## License
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
        Version 2, December 2004
