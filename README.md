@@ -3,7 +3,7 @@
 Charge Abe, discharge your brain, go party.
 
 * Public install : http://abe.rocknroot.org
-* Homepage : http://rocknroot.org/content/abe
+* Homepage : http://wiki.rocknroot.org/Abe
 * Version : alpha - 0.2-Connelly
 
 Abe (Amazing Brain Expansion) is kind of a personnal encyclopedia where you can throw notes and
