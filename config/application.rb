@@ -50,6 +50,8 @@ module Abe
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    # config.action_controller.relative_url_root = '/abe'
+
     # Enable the asset pipeline
     config.assets.enabled = true
 

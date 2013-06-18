@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'railties', '3.2.12'
 gem 'rails', '3.2.12'
 gem 'bcrypt-ruby', :require => 'bcrypt'
